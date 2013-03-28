@@ -9,17 +9,16 @@
 #import <Foundation/Foundation.h>
 
 @interface CLIPSEnvironment : NSObject {
-    void* ptr;
+    void* env;
     Boolean preExistingEnvironment;
 }
 -(id) init;
 -(id) initWithPreExistingEnvironment: (void*) env;
 -(void) dealloc;
 -(void) run: (NSInteger) duration;
--(void) batchStar: (NSString*) path;
--(void) loadStar: (NSString*) path;
--(void) batch: (NSString*) path;
--(void) load: (NSString*) path;
+-(Boolean) batchStar: (NSString*) path;
+-(Boolean) batch: (NSString*) path;
+-(Boolean) load: (NSString*) path;
 -(void) build: (NSString*) input;
 -(void) eval: (NSString*) input;
 -(void) halt;

@@ -94,4 +94,11 @@
             dataStorage: (DATA_OBJECT*) storage {
     return EnvArgTypeCheck(env, (char*)[functionName UTF8String], qType, offset, storage);
 }
+-(void) clear {
+    EnvClear(env);
+}
+
+-(void) reset {
+    EnvReset(env);
+}
 @end

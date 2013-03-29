@@ -34,4 +34,6 @@
 -(Boolean) argTypeCheck: (NSString*) functionName type: (int) qType targetIndex: (int) offset
             dataStorage: (DATA_OBJECT*) storage;
 -(void*) getEnvironment;
+-(void) clear;
+-(void) reset;
 @end

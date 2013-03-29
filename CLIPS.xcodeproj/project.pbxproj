@@ -218,7 +218,6 @@
 		E0794342170517A6002729C7 /* iofun.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941EA170517A5002729C7 /* iofun.h */; };
 		E0794343170517A6002729C7 /* lgcldpnd.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941EB170517A5002729C7 /* lgcldpnd.c */; };
 		E0794344170517A6002729C7 /* lgcldpnd.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941EC170517A5002729C7 /* lgcldpnd.h */; };
-		E0794345170517A6002729C7 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941ED170517A5002729C7 /* main.c */; };
 		E0794346170517A6002729C7 /* match.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941EE170517A5002729C7 /* match.h */; };
 		E0794347170517A6002729C7 /* memalloc.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941EF170517A5002729C7 /* memalloc.c */; };
 		E0794348170517A6002729C7 /* memalloc.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941F0170517A5002729C7 /* memalloc.h */; };
@@ -589,7 +588,6 @@
 		E07941EA170517A5002729C7 /* iofun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iofun.h; sourceTree = "<group>"; };
 		E07941EB170517A5002729C7 /* lgcldpnd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lgcldpnd.c; sourceTree = "<group>"; };
 		E07941EC170517A5002729C7 /* lgcldpnd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lgcldpnd.h; sourceTree = "<group>"; };
-		E07941ED170517A5002729C7 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		E07941EE170517A5002729C7 /* match.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = match.h; sourceTree = "<group>"; };
 		E07941EF170517A5002729C7 /* memalloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = memalloc.c; sourceTree = "<group>"; };
 		E07941F0170517A5002729C7 /* memalloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = memalloc.h; sourceTree = "<group>"; };
@@ -999,7 +997,6 @@
 				E07941EA170517A5002729C7 /* iofun.h */,
 				E07941EB170517A5002729C7 /* lgcldpnd.c */,
 				E07941EC170517A5002729C7 /* lgcldpnd.h */,
-				E07941ED170517A5002729C7 /* main.c */,
 				E07941EE170517A5002729C7 /* match.h */,
 				E07941EF170517A5002729C7 /* memalloc.c */,
 				E07941F0170517A5002729C7 /* memalloc.h */,
@@ -1566,7 +1563,6 @@
 				E079433F170517A6002729C7 /* insqypsr.c in Sources */,
 				E0794341170517A6002729C7 /* iofun.c in Sources */,
 				E0794343170517A6002729C7 /* lgcldpnd.c in Sources */,
-				E0794345170517A6002729C7 /* main.c in Sources */,
 				E0794347170517A6002729C7 /* memalloc.c in Sources */,
 				E0794349170517A6002729C7 /* miscfun.c in Sources */,
 				E079434B170517A6002729C7 /* modulbin.c in Sources */,

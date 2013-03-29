@@ -366,7 +366,7 @@
 /****************************************************************/
 
 #ifndef EMACS_EDITOR
-#define  EMACS_EDITOR 1
+#define  EMACS_EDITOR 0
 #endif
 
 #if GENERIC || MAC_XCD || MAC_MCW || WIN_MCW || WIN_BTC || WIN_MVC

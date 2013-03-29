@@ -7,7 +7,7 @@
 //
 
 #import "CLIPSEnvironment.h"
-#import "clips.h"
+#include "clips.h"
 
 @implementation CLIPSEnvironment
 -(id) init {
@@ -63,7 +63,10 @@
     return EnvAssertString(env, (char*)[string UTF8String]);
 }
 -(void*) makeInstanceFromString: (NSString*) string {
-    EnvMakeInstance(env, (char*)[string UTF8String]);
+    return EnvMakeInstance(env, (char*)[string UTF8String]);
+}
+-(Boolean) makeInstancesFromString:(NSString *)instances {
+    return EnvLoadInstancesFromString(env, (char*)[instances UTF8String], -1) != -1;
 }
 -(void) printRouter: (NSString*) router withMessage: (NSString*) message {
     EnvPrintRouter(env, (char*)[router UTF8String], (char*)[message UTF8String]);
@@ -87,7 +90,7 @@
     return EnvArgCount(env, (char*)[functionName UTF8String]);
 }
 -(Boolean) argCountCheck: (NSString*) functionName qualifier: (int) qualifier count: (int) aCount {
-    return EnvArgCountCheck(env, (char*)[functionName UTF8String], qualifier, aCount);
+    return EnvArgCountCheck(env, (char*)[functionName UTF8String], qualifier, aCount) == -1;
 }
 -(Boolean) argTypeCheck: (NSString*) functionName type: (int) qType targetIndex: (int) offset
             dataStorage: (DATA_OBJECT*) storage {

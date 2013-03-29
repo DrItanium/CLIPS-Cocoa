@@ -77,7 +77,9 @@
 -(void) printError: (NSString*) message {
     [self printRouter: @"werror" withMessage: message];
 }
-
+-(Boolean) isPreExistingEnvironment {
+    return preExistingEnvironment;
+}
 -(void*) getEnvironment {
     return env;
 }
@@ -101,5 +103,11 @@
 
 -(void) reset {
     EnvReset(env);
+}
++(id) newEnvironment {
+    return [[CLIPSEnvironment alloc] init];
+}
++(id) preExistingEnvironment: (void*) env {
+    return [[CLIPSEnvironment alloc] initWithPreExistingEnvironment: env];
 }
 @end

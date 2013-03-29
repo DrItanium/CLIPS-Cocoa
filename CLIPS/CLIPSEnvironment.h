@@ -12,6 +12,8 @@
     void* env;
     Boolean preExistingEnvironment;
 }
++(id) newEnvironment;
++(id) preExistingEnvironment: (void*) env;
 -(id) init;
 -(id) initWithPreExistingEnvironment: (void*) env;
 -(void) dealloc;
@@ -34,6 +36,7 @@
 -(Boolean) argTypeCheck: (NSString*) functionName type: (int) qType targetIndex: (int) offset
             dataStorage: (DATA_OBJECT*) storage;
 -(void*) getEnvironment;
+-(Boolean) isPreExistingEnvironment;
 -(void) clear;
 -(void) reset;
 @end

@@ -78,17 +78,15 @@
     [self printRouter: @"werror" withMessage: message];
 }
 -(void) addFunction: (NSString*) name returnType: (char) retType fnPtr: (void*) fPtr fnName: (NSString*) fnName {
-    EnvAddFunction(env, (char*)[name UTF8String], retType, fPtr, fnName);
+    EnvDefineFunction(env, (char*)[name UTF8String], retType, fPtr, fnName);
 }
 -(void*) getEnvironment {
     return env;
 }
 -(void) addFunction2: (NSString*) name returnType: (char) retType fnPtr: (void*) fPtr fnName: (NSString*) fnName fnArgs: (NSString*) fnArgs {
-    EnvAddFunction2(env, (char*)[name UTF8String], retType, fPtr, fnName, (char*)[fnArgs UTF8String]);
+    EnvDefineFunction2(env, (char*)[name UTF8String], retType, fPtr, fnName, (char*)[fnArgs UTF8String]);
 }
--(NSInteger) argCount: (NSString*) functionName {
-    return EnvArgCount(env, (char*)[functionName UTF8String]);
-}
+
 -(Boolean) argCountCheck: (NSString*) functionName qualifier: (int) qualifier count: (int) aCount {
     return EnvArgCountCheck(env, (char*)[functionName UTF8String], qualifier, aCount) == -1;
 }

@@ -30,7 +30,6 @@
 -(void) printError: (NSString*) message;
 -(void) defineFunction: (NSString*) name returnType: (char) retType fnPtr: (void*) fPtr fnName: (NSString*) fnName;
 -(void) defineFunction2: (NSString*) name returnType: (char) retType fnPtr: (void*) fPtr fnName: (NSString*) fnName fnArgs: (NSString*) fnArgs;
--(NSInteger) argCount: (NSString*) functionName;
 -(Boolean) argCountCheck: (NSString*) functionName qualifier: (int) qualifier count: (int) aCount;
 -(Boolean) argTypeCheck: (NSString*) functionName type: (int) qType targetIndex: (int) offset
             dataStorage: (DATA_OBJECT*) storage;

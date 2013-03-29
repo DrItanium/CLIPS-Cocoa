@@ -77,14 +77,15 @@
 -(void) printError: (NSString*) message {
     [self printRouter: @"werror" withMessage: message];
 }
--(void) addFunction: (NSString*) name returnType: (char) retType fnPtr: (void*) fPtr fnName: (NSString*) fnName {
-    EnvDefineFunction(env, (char*)[name UTF8String], retType, fPtr, fnName);
-}
+
 -(void*) getEnvironment {
     return env;
 }
--(void) addFunction2: (NSString*) name returnType: (char) retType fnPtr: (void*) fPtr fnName: (NSString*) fnName fnArgs: (NSString*) fnArgs {
-    EnvDefineFunction2(env, (char*)[name UTF8String], retType, fPtr, fnName, (char*)[fnArgs UTF8String]);
+-(void) defineFunction: (NSString*) name returnType: (char) retType fnPtr: (void*) fPtr fnName: (NSString*) fnName {
+    EnvDefineFunction(env, (char*)[name UTF8String], retType, fPtr, (char*)[fnName UTF8String]);
+}
+-(void) defineFunction2: (NSString*) name returnType: (char) retType fnPtr: (void*) fPtr fnName: (NSString*) fnName fnArgs: (NSString*) fnArgs {
+    EnvDefineFunction2(env, (char*)[name UTF8String], retType, fPtr, (char*)[fnName UTF8String], (char*)[fnArgs UTF8String]);
 }
 
 -(Boolean) argCountCheck: (NSString*) functionName qualifier: (int) qualifier count: (int) aCount {

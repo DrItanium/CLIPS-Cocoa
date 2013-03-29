@@ -13,16 +13,16 @@
 -(id) init {
     self = [super init];
     if(self) {
-    preExistingEnvironment = false;
-    env = CreateEnvironment();
+        preExistingEnvironment = false;
+        env = CreateEnvironment();
     }
     return self;
 }
 -(id) initWithPreExistingEnvironment: (void*) tEnv {
     self = [super init];
     if(self) {
-    preExistingEnvironment = true;
-    env = tEnv;
+        preExistingEnvironment = true;
+        env = tEnv;
     }
     return self;
 }

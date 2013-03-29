@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "clips.h"
 @interface CLIPSEnvironment : NSObject {
     void* env;
     Boolean preExistingEnvironment;
@@ -20,9 +20,9 @@
 -(Boolean) batch: (NSString*) path;
 -(Boolean) load: (NSString*) path;
 -(void) build: (NSString*) input;
--(void) eval: (NSString*) input;
+-(Boolean) eval: (NSString*) input storageUnit: (DATA_OBJECT_PTR) value;
 -(void) halt;
--(void) assertString: (NSString*) string;
+-(void*) assertString: (NSString*) string;
 -(void) makeInstanceFromString: (NSString*) string;
 -(void) makeInstancesFromString: (NSString*) instances;
 -(void) printRouter: (NSString*) router withMessage: (NSString*) message;
@@ -31,8 +31,8 @@
 -(void) addFunction: (NSString*) name returnType: (char) retType fnPtr: (void*) fPtr fnName: (NSString*) fnName;
 -(void) addFunction2: (NSString*) name returnType: (char) retType fnPtr: (void*) fPtr fnName: (NSString*) fnName fnArgs: (NSString*) fnArgs;
 -(NSInteger) argCount: (NSString*) functionName;
--(Boolean) argCountCheck: (NSString*) functionName qualifier: (NSInteger) qualifier count: (NSInteger) aCount;
--(Boolean) argTypeCheck: (NSString*) functionName type: (NSInteger) qType targetIndex: (NSInteger) offset
-            dataStorage: (id) storage;
-
+-(Boolean) argCountCheck: (NSString*) functionName qualifier: (int) qualifier count: (int) aCount;
+-(Boolean) argTypeCheck: (NSString*) functionName type: (int) qType targetIndex: (int) offset
+            dataStorage: (DATA_OBJECT*) storage;
+-(void*) getEnvironment;
 @end

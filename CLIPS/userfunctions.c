@@ -42,7 +42,7 @@
 /***************************************************************************/
 
 #include "clips.h"
-
+#include "NSLogRouter.h"
 void UserFunctions(void);
 void EnvUserFunctions(void *);
 
@@ -77,5 +77,6 @@ void EnvUserFunctions(
 #if MAC_MCW || WIN_MCW || MAC_XCD
 #pragma unused(theEnv)
 #endif
+      RegisterNSLogRouters(theEnv);
   }
 

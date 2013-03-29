@@ -9,12 +9,355 @@
 /* Begin PBXBuildFile section */
 		E0793963170500A4002729C7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0793962170500A4002729C7 /* Cocoa.framework */; };
 		E079396D170500A4002729C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E079396B170500A4002729C7 /* InfoPlist.strings */; };
-		E0793971170500A4002729C7 /* CLIPS.m in Sources */ = {isa = PBXBuildFile; fileRef = E0793970170500A4002729C7 /* CLIPS.m */; };
 		E0793979170500A5002729C7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0793978170500A5002729C7 /* SenTestingKit.framework */; };
 		E079397A170500A5002729C7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0793962170500A4002729C7 /* Cocoa.framework */; };
 		E079397D170500A5002729C7 /* CLIPS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E079395F170500A4002729C7 /* CLIPS.framework */; };
 		E0793983170500A5002729C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E0793981170500A5002729C7 /* InfoPlist.strings */; };
 		E0793986170500A5002729C7 /* CLIPSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E0793985170500A5002729C7 /* CLIPSTests.m */; };
+		E0794279170517A6002729C7 /* agenda.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794121170517A5002729C7 /* agenda.c */; };
+		E079427A170517A6002729C7 /* agenda.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794122170517A5002729C7 /* agenda.h */; };
+		E079427B170517A6002729C7 /* analysis.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794123170517A5002729C7 /* analysis.c */; };
+		E079427C170517A6002729C7 /* analysis.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794124170517A5002729C7 /* analysis.h */; };
+		E079427D170517A6002729C7 /* argacces.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794125170517A5002729C7 /* argacces.c */; };
+		E079427E170517A6002729C7 /* argacces.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794126170517A5002729C7 /* argacces.h */; };
+		E079427F170517A6002729C7 /* bload.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794127170517A5002729C7 /* bload.c */; };
+		E0794280170517A6002729C7 /* bload.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794128170517A5002729C7 /* bload.h */; };
+		E0794281170517A6002729C7 /* bmathfun.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794129170517A5002729C7 /* bmathfun.c */; };
+		E0794282170517A6002729C7 /* bmathfun.h in Headers */ = {isa = PBXBuildFile; fileRef = E079412A170517A5002729C7 /* bmathfun.h */; };
+		E0794283170517A6002729C7 /* bsave.c in Sources */ = {isa = PBXBuildFile; fileRef = E079412B170517A5002729C7 /* bsave.c */; };
+		E0794284170517A6002729C7 /* bsave.h in Headers */ = {isa = PBXBuildFile; fileRef = E079412C170517A5002729C7 /* bsave.h */; };
+		E0794285170517A6002729C7 /* classcom.c in Sources */ = {isa = PBXBuildFile; fileRef = E079412D170517A5002729C7 /* classcom.c */; };
+		E0794286170517A6002729C7 /* classcom.h in Headers */ = {isa = PBXBuildFile; fileRef = E079412E170517A5002729C7 /* classcom.h */; };
+		E0794287170517A6002729C7 /* classexm.c in Sources */ = {isa = PBXBuildFile; fileRef = E079412F170517A5002729C7 /* classexm.c */; };
+		E0794288170517A6002729C7 /* classexm.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794130170517A5002729C7 /* classexm.h */; };
+		E0794289170517A6002729C7 /* classfun.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794131170517A5002729C7 /* classfun.c */; };
+		E079428A170517A6002729C7 /* classfun.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794132170517A5002729C7 /* classfun.h */; };
+		E079428B170517A6002729C7 /* classinf.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794133170517A5002729C7 /* classinf.c */; };
+		E079428C170517A6002729C7 /* classinf.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794134170517A5002729C7 /* classinf.h */; };
+		E079428D170517A6002729C7 /* classini.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794135170517A5002729C7 /* classini.c */; };
+		E079428E170517A6002729C7 /* classini.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794136170517A5002729C7 /* classini.h */; };
+		E079428F170517A6002729C7 /* classpsr.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794137170517A5002729C7 /* classpsr.c */; };
+		E0794290170517A6002729C7 /* classpsr.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794138170517A5002729C7 /* classpsr.h */; };
+		E0794291170517A6002729C7 /* clips.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794139170517A5002729C7 /* clips.h */; };
+		E0794292170517A6002729C7 /* CLIPSEnvironment.h in Headers */ = {isa = PBXBuildFile; fileRef = E079413A170517A5002729C7 /* CLIPSEnvironment.h */; };
+		E0794293170517A6002729C7 /* CLIPSEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = E079413B170517A5002729C7 /* CLIPSEnvironment.m */; };
+		E0794294170517A6002729C7 /* clsltpsr.c in Sources */ = {isa = PBXBuildFile; fileRef = E079413C170517A5002729C7 /* clsltpsr.c */; };
+		E0794295170517A6002729C7 /* clsltpsr.h in Headers */ = {isa = PBXBuildFile; fileRef = E079413D170517A5002729C7 /* clsltpsr.h */; };
+		E0794296170517A6002729C7 /* cmptblty.h in Headers */ = {isa = PBXBuildFile; fileRef = E079413E170517A5002729C7 /* cmptblty.h */; };
+		E0794297170517A6002729C7 /* commline.c in Sources */ = {isa = PBXBuildFile; fileRef = E079413F170517A5002729C7 /* commline.c */; };
+		E0794298170517A6002729C7 /* commline.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794140170517A5002729C7 /* commline.h */; };
+		E0794299170517A6002729C7 /* conscomp.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794141170517A5002729C7 /* conscomp.c */; };
+		E079429A170517A6002729C7 /* conscomp.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794142170517A5002729C7 /* conscomp.h */; };
+		E079429B170517A6002729C7 /* constant.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794143170517A5002729C7 /* constant.h */; };
+		E079429C170517A6002729C7 /* constrct.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794144170517A5002729C7 /* constrct.c */; };
+		E079429D170517A6002729C7 /* constrct.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794145170517A5002729C7 /* constrct.h */; };
+		E079429E170517A6002729C7 /* constrnt.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794146170517A5002729C7 /* constrnt.c */; };
+		E079429F170517A6002729C7 /* constrnt.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794147170517A5002729C7 /* constrnt.h */; };
+		E07942A0170517A6002729C7 /* crstrtgy.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794148170517A5002729C7 /* crstrtgy.c */; };
+		E07942A1170517A6002729C7 /* crstrtgy.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794149170517A5002729C7 /* crstrtgy.h */; };
+		E07942A2170517A6002729C7 /* cstrcbin.c in Sources */ = {isa = PBXBuildFile; fileRef = E079414A170517A5002729C7 /* cstrcbin.c */; };
+		E07942A3170517A6002729C7 /* cstrcbin.h in Headers */ = {isa = PBXBuildFile; fileRef = E079414B170517A5002729C7 /* cstrcbin.h */; };
+		E07942A4170517A6002729C7 /* cstrccmp.h in Headers */ = {isa = PBXBuildFile; fileRef = E079414C170517A5002729C7 /* cstrccmp.h */; };
+		E07942A5170517A6002729C7 /* cstrccom.c in Sources */ = {isa = PBXBuildFile; fileRef = E079414D170517A5002729C7 /* cstrccom.c */; };
+		E07942A6170517A6002729C7 /* cstrccom.h in Headers */ = {isa = PBXBuildFile; fileRef = E079414E170517A5002729C7 /* cstrccom.h */; };
+		E07942A7170517A6002729C7 /* cstrcpsr.c in Sources */ = {isa = PBXBuildFile; fileRef = E079414F170517A5002729C7 /* cstrcpsr.c */; };
+		E07942A8170517A6002729C7 /* cstrcpsr.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794150170517A5002729C7 /* cstrcpsr.h */; };
+		E07942A9170517A6002729C7 /* cstrnbin.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794151170517A5002729C7 /* cstrnbin.c */; };
+		E07942AA170517A6002729C7 /* cstrnbin.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794152170517A5002729C7 /* cstrnbin.h */; };
+		E07942AB170517A6002729C7 /* cstrnchk.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794153170517A5002729C7 /* cstrnchk.c */; };
+		E07942AC170517A6002729C7 /* cstrnchk.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794154170517A5002729C7 /* cstrnchk.h */; };
+		E07942AD170517A6002729C7 /* cstrncmp.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794155170517A5002729C7 /* cstrncmp.c */; };
+		E07942AE170517A6002729C7 /* cstrncmp.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794156170517A5002729C7 /* cstrncmp.h */; };
+		E07942AF170517A6002729C7 /* cstrnops.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794157170517A5002729C7 /* cstrnops.c */; };
+		E07942B0170517A6002729C7 /* cstrnops.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794158170517A5002729C7 /* cstrnops.h */; };
+		E07942B1170517A6002729C7 /* cstrnpsr.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794159170517A5002729C7 /* cstrnpsr.c */; };
+		E07942B2170517A6002729C7 /* cstrnpsr.h in Headers */ = {isa = PBXBuildFile; fileRef = E079415A170517A5002729C7 /* cstrnpsr.h */; };
+		E07942B3170517A6002729C7 /* cstrnutl.c in Sources */ = {isa = PBXBuildFile; fileRef = E079415B170517A5002729C7 /* cstrnutl.c */; };
+		E07942B4170517A6002729C7 /* cstrnutl.h in Headers */ = {isa = PBXBuildFile; fileRef = E079415C170517A5002729C7 /* cstrnutl.h */; };
+		E07942B5170517A6002729C7 /* default.c in Sources */ = {isa = PBXBuildFile; fileRef = E079415D170517A5002729C7 /* default.c */; };
+		E07942B6170517A6002729C7 /* default.h in Headers */ = {isa = PBXBuildFile; fileRef = E079415E170517A5002729C7 /* default.h */; };
+		E07942B7170517A6002729C7 /* defins.c in Sources */ = {isa = PBXBuildFile; fileRef = E079415F170517A5002729C7 /* defins.c */; };
+		E07942B8170517A6002729C7 /* defins.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794160170517A5002729C7 /* defins.h */; };
+		E07942B9170517A6002729C7 /* developr.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794161170517A5002729C7 /* developr.c */; };
+		E07942BA170517A6002729C7 /* developr.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794162170517A5002729C7 /* developr.h */; };
+		E07942BB170517A6002729C7 /* dffctbin.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794163170517A5002729C7 /* dffctbin.c */; };
+		E07942BC170517A6002729C7 /* dffctbin.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794164170517A5002729C7 /* dffctbin.h */; };
+		E07942BD170517A6002729C7 /* dffctbsc.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794165170517A5002729C7 /* dffctbsc.c */; };
+		E07942BE170517A6002729C7 /* dffctbsc.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794166170517A5002729C7 /* dffctbsc.h */; };
+		E07942BF170517A6002729C7 /* dffctcmp.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794167170517A5002729C7 /* dffctcmp.c */; };
+		E07942C0170517A6002729C7 /* dffctcmp.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794168170517A5002729C7 /* dffctcmp.h */; };
+		E07942C1170517A6002729C7 /* dffctdef.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794169170517A5002729C7 /* dffctdef.c */; };
+		E07942C2170517A6002729C7 /* dffctdef.h in Headers */ = {isa = PBXBuildFile; fileRef = E079416A170517A5002729C7 /* dffctdef.h */; };
+		E07942C3170517A6002729C7 /* dffctpsr.c in Sources */ = {isa = PBXBuildFile; fileRef = E079416B170517A5002729C7 /* dffctpsr.c */; };
+		E07942C4170517A6002729C7 /* dffctpsr.h in Headers */ = {isa = PBXBuildFile; fileRef = E079416C170517A5002729C7 /* dffctpsr.h */; };
+		E07942C5170517A6002729C7 /* dffnxbin.c in Sources */ = {isa = PBXBuildFile; fileRef = E079416D170517A5002729C7 /* dffnxbin.c */; };
+		E07942C6170517A6002729C7 /* dffnxbin.h in Headers */ = {isa = PBXBuildFile; fileRef = E079416E170517A5002729C7 /* dffnxbin.h */; };
+		E07942C7170517A6002729C7 /* dffnxcmp.c in Sources */ = {isa = PBXBuildFile; fileRef = E079416F170517A5002729C7 /* dffnxcmp.c */; };
+		E07942C8170517A6002729C7 /* dffnxcmp.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794170170517A5002729C7 /* dffnxcmp.h */; };
+		E07942C9170517A6002729C7 /* dffnxexe.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794171170517A5002729C7 /* dffnxexe.c */; };
+		E07942CA170517A6002729C7 /* dffnxexe.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794172170517A5002729C7 /* dffnxexe.h */; };
+		E07942CB170517A6002729C7 /* dffnxfun.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794173170517A5002729C7 /* dffnxfun.c */; };
+		E07942CC170517A6002729C7 /* dffnxfun.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794174170517A5002729C7 /* dffnxfun.h */; };
+		E07942CD170517A6002729C7 /* dffnxpsr.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794175170517A5002729C7 /* dffnxpsr.c */; };
+		E07942CE170517A6002729C7 /* dffnxpsr.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794176170517A5002729C7 /* dffnxpsr.h */; };
+		E07942CF170517A6002729C7 /* dfinsbin.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794177170517A5002729C7 /* dfinsbin.c */; };
+		E07942D0170517A6002729C7 /* dfinsbin.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794178170517A5002729C7 /* dfinsbin.h */; };
+		E07942D1170517A6002729C7 /* dfinscmp.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794179170517A5002729C7 /* dfinscmp.c */; };
+		E07942D2170517A6002729C7 /* dfinscmp.h in Headers */ = {isa = PBXBuildFile; fileRef = E079417A170517A5002729C7 /* dfinscmp.h */; };
+		E07942D3170517A6002729C7 /* drive.c in Sources */ = {isa = PBXBuildFile; fileRef = E079417B170517A5002729C7 /* drive.c */; };
+		E07942D4170517A6002729C7 /* drive.h in Headers */ = {isa = PBXBuildFile; fileRef = E079417C170517A5002729C7 /* drive.h */; };
+		E07942D5170517A6002729C7 /* ed.h in Headers */ = {isa = PBXBuildFile; fileRef = E079417D170517A5002729C7 /* ed.h */; };
+		E07942D6170517A6002729C7 /* edbasic.c in Sources */ = {isa = PBXBuildFile; fileRef = E079417E170517A5002729C7 /* edbasic.c */; };
+		E07942D7170517A6002729C7 /* edmain.c in Sources */ = {isa = PBXBuildFile; fileRef = E079417F170517A5002729C7 /* edmain.c */; };
+		E07942D8170517A6002729C7 /* edmisc.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794180170517A5002729C7 /* edmisc.c */; };
+		E07942D9170517A6002729C7 /* edstruct.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794181170517A5002729C7 /* edstruct.c */; };
+		E07942DA170517A6002729C7 /* edterm.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794182170517A5002729C7 /* edterm.c */; };
+		E07942DB170517A6002729C7 /* emathfun.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794183170517A5002729C7 /* emathfun.c */; };
+		E07942DC170517A6002729C7 /* emathfun.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794184170517A5002729C7 /* emathfun.h */; };
+		E07942DD170517A6002729C7 /* engine.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794185170517A5002729C7 /* engine.c */; };
+		E07942DE170517A6002729C7 /* engine.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794186170517A5002729C7 /* engine.h */; };
+		E07942DF170517A6002729C7 /* envrnmnt.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794187170517A5002729C7 /* envrnmnt.c */; };
+		E07942E0170517A6002729C7 /* envrnmnt.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794188170517A5002729C7 /* envrnmnt.h */; };
+		E07942E1170517A6002729C7 /* evaluatn.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794189170517A5002729C7 /* evaluatn.c */; };
+		E07942E2170517A6002729C7 /* evaluatn.h in Headers */ = {isa = PBXBuildFile; fileRef = E079418A170517A5002729C7 /* evaluatn.h */; };
+		E07942E3170517A6002729C7 /* expressn.c in Sources */ = {isa = PBXBuildFile; fileRef = E079418B170517A5002729C7 /* expressn.c */; };
+		E07942E4170517A6002729C7 /* expressn.h in Headers */ = {isa = PBXBuildFile; fileRef = E079418C170517A5002729C7 /* expressn.h */; };
+		E07942E5170517A6002729C7 /* exprnbin.c in Sources */ = {isa = PBXBuildFile; fileRef = E079418D170517A5002729C7 /* exprnbin.c */; };
+		E07942E6170517A6002729C7 /* exprnbin.h in Headers */ = {isa = PBXBuildFile; fileRef = E079418E170517A5002729C7 /* exprnbin.h */; };
+		E07942E7170517A6002729C7 /* exprnops.c in Sources */ = {isa = PBXBuildFile; fileRef = E079418F170517A5002729C7 /* exprnops.c */; };
+		E07942E8170517A6002729C7 /* exprnops.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794190170517A5002729C7 /* exprnops.h */; };
+		E07942E9170517A6002729C7 /* exprnpsr.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794191170517A5002729C7 /* exprnpsr.c */; };
+		E07942EA170517A6002729C7 /* exprnpsr.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794192170517A5002729C7 /* exprnpsr.h */; };
+		E07942EB170517A6002729C7 /* extnfunc.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794193170517A5002729C7 /* extnfunc.c */; };
+		E07942EC170517A6002729C7 /* extnfunc.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794194170517A5002729C7 /* extnfunc.h */; };
+		E07942ED170517A6002729C7 /* factbin.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794195170517A5002729C7 /* factbin.c */; };
+		E07942EE170517A6002729C7 /* factbin.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794196170517A5002729C7 /* factbin.h */; };
+		E07942EF170517A6002729C7 /* factbld.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794197170517A5002729C7 /* factbld.c */; };
+		E07942F0170517A6002729C7 /* factbld.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794198170517A5002729C7 /* factbld.h */; };
+		E07942F1170517A6002729C7 /* factcmp.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794199170517A5002729C7 /* factcmp.c */; };
+		E07942F2170517A6002729C7 /* factcmp.h in Headers */ = {isa = PBXBuildFile; fileRef = E079419A170517A5002729C7 /* factcmp.h */; };
+		E07942F3170517A6002729C7 /* factcom.c in Sources */ = {isa = PBXBuildFile; fileRef = E079419B170517A5002729C7 /* factcom.c */; };
+		E07942F4170517A6002729C7 /* factcom.h in Headers */ = {isa = PBXBuildFile; fileRef = E079419C170517A5002729C7 /* factcom.h */; };
+		E07942F5170517A6002729C7 /* factfun.c in Sources */ = {isa = PBXBuildFile; fileRef = E079419D170517A5002729C7 /* factfun.c */; };
+		E07942F6170517A6002729C7 /* factfun.h in Headers */ = {isa = PBXBuildFile; fileRef = E079419E170517A5002729C7 /* factfun.h */; };
+		E07942F7170517A6002729C7 /* factgen.c in Sources */ = {isa = PBXBuildFile; fileRef = E079419F170517A5002729C7 /* factgen.c */; };
+		E07942F8170517A6002729C7 /* factgen.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941A0170517A5002729C7 /* factgen.h */; };
+		E07942F9170517A6002729C7 /* facthsh.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941A1170517A5002729C7 /* facthsh.c */; };
+		E07942FA170517A6002729C7 /* facthsh.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941A2170517A5002729C7 /* facthsh.h */; };
+		E07942FB170517A6002729C7 /* factlhs.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941A3170517A5002729C7 /* factlhs.c */; };
+		E07942FC170517A6002729C7 /* factlhs.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941A4170517A5002729C7 /* factlhs.h */; };
+		E07942FD170517A6002729C7 /* factmch.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941A5170517A5002729C7 /* factmch.c */; };
+		E07942FE170517A6002729C7 /* factmch.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941A6170517A5002729C7 /* factmch.h */; };
+		E07942FF170517A6002729C7 /* factmngr.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941A7170517A5002729C7 /* factmngr.c */; };
+		E0794300170517A6002729C7 /* factmngr.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941A8170517A5002729C7 /* factmngr.h */; };
+		E0794301170517A6002729C7 /* factprt.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941A9170517A5002729C7 /* factprt.c */; };
+		E0794302170517A6002729C7 /* factprt.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941AA170517A5002729C7 /* factprt.h */; };
+		E0794303170517A6002729C7 /* factqpsr.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941AB170517A5002729C7 /* factqpsr.c */; };
+		E0794304170517A6002729C7 /* factqpsr.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941AC170517A5002729C7 /* factqpsr.h */; };
+		E0794305170517A6002729C7 /* factqury.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941AD170517A5002729C7 /* factqury.c */; };
+		E0794306170517A6002729C7 /* factqury.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941AE170517A5002729C7 /* factqury.h */; };
+		E0794307170517A6002729C7 /* factrete.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941AF170517A5002729C7 /* factrete.c */; };
+		E0794308170517A6002729C7 /* factrete.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941B0170517A5002729C7 /* factrete.h */; };
+		E0794309170517A6002729C7 /* factrhs.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941B1170517A5002729C7 /* factrhs.c */; };
+		E079430A170517A6002729C7 /* factrhs.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941B2170517A5002729C7 /* factrhs.h */; };
+		E079430B170517A6002729C7 /* filecom.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941B3170517A5002729C7 /* filecom.c */; };
+		E079430C170517A6002729C7 /* filecom.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941B4170517A5002729C7 /* filecom.h */; };
+		E079430D170517A6002729C7 /* filertr.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941B5170517A5002729C7 /* filertr.c */; };
+		E079430E170517A6002729C7 /* filertr.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941B6170517A5002729C7 /* filertr.h */; };
+		E079430F170517A6002729C7 /* generate.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941B7170517A5002729C7 /* generate.c */; };
+		E0794310170517A6002729C7 /* generate.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941B8170517A5002729C7 /* generate.h */; };
+		E0794311170517A6002729C7 /* genrcbin.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941B9170517A5002729C7 /* genrcbin.c */; };
+		E0794312170517A6002729C7 /* genrcbin.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941BA170517A5002729C7 /* genrcbin.h */; };
+		E0794313170517A6002729C7 /* genrccmp.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941BB170517A5002729C7 /* genrccmp.c */; };
+		E0794314170517A6002729C7 /* genrccmp.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941BC170517A5002729C7 /* genrccmp.h */; };
+		E0794315170517A6002729C7 /* genrccom.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941BD170517A5002729C7 /* genrccom.c */; };
+		E0794316170517A6002729C7 /* genrccom.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941BE170517A5002729C7 /* genrccom.h */; };
+		E0794317170517A6002729C7 /* genrcexe.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941BF170517A5002729C7 /* genrcexe.c */; };
+		E0794318170517A6002729C7 /* genrcexe.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941C0170517A5002729C7 /* genrcexe.h */; };
+		E0794319170517A6002729C7 /* genrcfun.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941C1170517A5002729C7 /* genrcfun.c */; };
+		E079431A170517A6002729C7 /* genrcfun.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941C2170517A5002729C7 /* genrcfun.h */; };
+		E079431B170517A6002729C7 /* genrcpsr.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941C3170517A5002729C7 /* genrcpsr.c */; };
+		E079431C170517A6002729C7 /* genrcpsr.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941C4170517A5002729C7 /* genrcpsr.h */; };
+		E079431D170517A6002729C7 /* globlbin.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941C5170517A5002729C7 /* globlbin.c */; };
+		E079431E170517A6002729C7 /* globlbin.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941C6170517A5002729C7 /* globlbin.h */; };
+		E079431F170517A6002729C7 /* globlbsc.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941C7170517A5002729C7 /* globlbsc.c */; };
+		E0794320170517A6002729C7 /* globlbsc.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941C8170517A5002729C7 /* globlbsc.h */; };
+		E0794321170517A6002729C7 /* globlcmp.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941C9170517A5002729C7 /* globlcmp.c */; };
+		E0794322170517A6002729C7 /* globlcmp.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941CA170517A5002729C7 /* globlcmp.h */; };
+		E0794323170517A6002729C7 /* globlcom.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941CB170517A5002729C7 /* globlcom.c */; };
+		E0794324170517A6002729C7 /* globlcom.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941CC170517A5002729C7 /* globlcom.h */; };
+		E0794325170517A6002729C7 /* globldef.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941CD170517A5002729C7 /* globldef.c */; };
+		E0794326170517A6002729C7 /* globldef.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941CE170517A5002729C7 /* globldef.h */; };
+		E0794327170517A6002729C7 /* globlpsr.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941CF170517A5002729C7 /* globlpsr.c */; };
+		E0794328170517A6002729C7 /* globlpsr.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941D0170517A5002729C7 /* globlpsr.h */; };
+		E0794329170517A6002729C7 /* immthpsr.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941D1170517A5002729C7 /* immthpsr.c */; };
+		E079432A170517A6002729C7 /* immthpsr.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941D2170517A5002729C7 /* immthpsr.h */; };
+		E079432B170517A6002729C7 /* incrrset.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941D3170517A5002729C7 /* incrrset.c */; };
+		E079432C170517A6002729C7 /* incrrset.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941D4170517A5002729C7 /* incrrset.h */; };
+		E079432D170517A6002729C7 /* inherpsr.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941D5170517A5002729C7 /* inherpsr.c */; };
+		E079432E170517A6002729C7 /* inherpsr.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941D6170517A5002729C7 /* inherpsr.h */; };
+		E079432F170517A6002729C7 /* inscom.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941D7170517A5002729C7 /* inscom.c */; };
+		E0794330170517A6002729C7 /* inscom.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941D8170517A5002729C7 /* inscom.h */; };
+		E0794331170517A6002729C7 /* insfile.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941D9170517A5002729C7 /* insfile.c */; };
+		E0794332170517A6002729C7 /* insfile.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941DA170517A5002729C7 /* insfile.h */; };
+		E0794333170517A6002729C7 /* insfun.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941DB170517A5002729C7 /* insfun.c */; };
+		E0794334170517A6002729C7 /* insfun.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941DC170517A5002729C7 /* insfun.h */; };
+		E0794335170517A6002729C7 /* insmngr.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941DD170517A5002729C7 /* insmngr.c */; };
+		E0794336170517A6002729C7 /* insmngr.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941DE170517A5002729C7 /* insmngr.h */; };
+		E0794337170517A6002729C7 /* insmoddp.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941DF170517A5002729C7 /* insmoddp.c */; };
+		E0794338170517A6002729C7 /* insmoddp.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941E0170517A5002729C7 /* insmoddp.h */; };
+		E0794339170517A6002729C7 /* insmult.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941E1170517A5002729C7 /* insmult.c */; };
+		E079433A170517A6002729C7 /* insmult.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941E2170517A5002729C7 /* insmult.h */; };
+		E079433B170517A6002729C7 /* inspsr.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941E3170517A5002729C7 /* inspsr.c */; };
+		E079433C170517A6002729C7 /* inspsr.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941E4170517A5002729C7 /* inspsr.h */; };
+		E079433D170517A6002729C7 /* insquery.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941E5170517A5002729C7 /* insquery.c */; };
+		E079433E170517A6002729C7 /* insquery.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941E6170517A5002729C7 /* insquery.h */; };
+		E079433F170517A6002729C7 /* insqypsr.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941E7170517A5002729C7 /* insqypsr.c */; };
+		E0794340170517A6002729C7 /* insqypsr.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941E8170517A5002729C7 /* insqypsr.h */; };
+		E0794341170517A6002729C7 /* iofun.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941E9170517A5002729C7 /* iofun.c */; };
+		E0794342170517A6002729C7 /* iofun.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941EA170517A5002729C7 /* iofun.h */; };
+		E0794343170517A6002729C7 /* lgcldpnd.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941EB170517A5002729C7 /* lgcldpnd.c */; };
+		E0794344170517A6002729C7 /* lgcldpnd.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941EC170517A5002729C7 /* lgcldpnd.h */; };
+		E0794345170517A6002729C7 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941ED170517A5002729C7 /* main.c */; };
+		E0794346170517A6002729C7 /* match.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941EE170517A5002729C7 /* match.h */; };
+		E0794347170517A6002729C7 /* memalloc.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941EF170517A5002729C7 /* memalloc.c */; };
+		E0794348170517A6002729C7 /* memalloc.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941F0170517A5002729C7 /* memalloc.h */; };
+		E0794349170517A6002729C7 /* miscfun.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941F1170517A5002729C7 /* miscfun.c */; };
+		E079434A170517A6002729C7 /* miscfun.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941F2170517A5002729C7 /* miscfun.h */; };
+		E079434B170517A6002729C7 /* modulbin.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941F3170517A5002729C7 /* modulbin.c */; };
+		E079434C170517A6002729C7 /* modulbin.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941F4170517A5002729C7 /* modulbin.h */; };
+		E079434D170517A6002729C7 /* modulbsc.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941F5170517A5002729C7 /* modulbsc.c */; };
+		E079434E170517A6002729C7 /* modulbsc.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941F6170517A5002729C7 /* modulbsc.h */; };
+		E079434F170517A6002729C7 /* modulcmp.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941F7170517A5002729C7 /* modulcmp.c */; };
+		E0794350170517A6002729C7 /* modulcmp.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941F8170517A5002729C7 /* modulcmp.h */; };
+		E0794351170517A6002729C7 /* moduldef.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941F9170517A5002729C7 /* moduldef.c */; };
+		E0794352170517A6002729C7 /* moduldef.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941FA170517A5002729C7 /* moduldef.h */; };
+		E0794353170517A6002729C7 /* modulpsr.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941FB170517A5002729C7 /* modulpsr.c */; };
+		E0794354170517A6002729C7 /* modulpsr.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941FC170517A5002729C7 /* modulpsr.h */; };
+		E0794355170517A6002729C7 /* modulutl.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941FD170517A5002729C7 /* modulutl.c */; };
+		E0794356170517A6002729C7 /* modulutl.h in Headers */ = {isa = PBXBuildFile; fileRef = E07941FE170517A5002729C7 /* modulutl.h */; };
+		E0794357170517A6002729C7 /* msgcom.c in Sources */ = {isa = PBXBuildFile; fileRef = E07941FF170517A5002729C7 /* msgcom.c */; };
+		E0794358170517A6002729C7 /* msgcom.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794200170517A5002729C7 /* msgcom.h */; };
+		E0794359170517A6002729C7 /* msgfun.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794201170517A5002729C7 /* msgfun.c */; };
+		E079435A170517A6002729C7 /* msgfun.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794202170517A5002729C7 /* msgfun.h */; };
+		E079435B170517A6002729C7 /* msgpass.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794203170517A5002729C7 /* msgpass.c */; };
+		E079435C170517A6002729C7 /* msgpass.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794204170517A5002729C7 /* msgpass.h */; };
+		E079435D170517A6002729C7 /* msgpsr.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794205170517A5002729C7 /* msgpsr.c */; };
+		E079435E170517A6002729C7 /* msgpsr.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794206170517A5002729C7 /* msgpsr.h */; };
+		E079435F170517A6002729C7 /* multifld.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794207170517A5002729C7 /* multifld.c */; };
+		E0794360170517A6002729C7 /* multifld.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794208170517A5002729C7 /* multifld.h */; };
+		E0794361170517A6002729C7 /* multifun.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794209170517A5002729C7 /* multifun.c */; };
+		E0794362170517A6002729C7 /* multifun.h in Headers */ = {isa = PBXBuildFile; fileRef = E079420A170517A5002729C7 /* multifun.h */; };
+		E0794363170517A6002729C7 /* network.h in Headers */ = {isa = PBXBuildFile; fileRef = E079420B170517A5002729C7 /* network.h */; };
+		E0794364170517A6002729C7 /* objbin.c in Sources */ = {isa = PBXBuildFile; fileRef = E079420C170517A5002729C7 /* objbin.c */; };
+		E0794365170517A6002729C7 /* objbin.h in Headers */ = {isa = PBXBuildFile; fileRef = E079420D170517A5002729C7 /* objbin.h */; };
+		E0794366170517A6002729C7 /* objcmp.c in Sources */ = {isa = PBXBuildFile; fileRef = E079420E170517A5002729C7 /* objcmp.c */; };
+		E0794367170517A6002729C7 /* objcmp.h in Headers */ = {isa = PBXBuildFile; fileRef = E079420F170517A5002729C7 /* objcmp.h */; };
+		E0794368170517A6002729C7 /* object.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794210170517A5002729C7 /* object.h */; };
+		E0794369170517A6002729C7 /* objrtbin.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794211170517A5002729C7 /* objrtbin.c */; };
+		E079436A170517A6002729C7 /* objrtbin.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794212170517A5002729C7 /* objrtbin.h */; };
+		E079436B170517A6002729C7 /* objrtbld.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794213170517A5002729C7 /* objrtbld.c */; };
+		E079436C170517A6002729C7 /* objrtbld.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794214170517A5002729C7 /* objrtbld.h */; };
+		E079436D170517A6002729C7 /* objrtcmp.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794215170517A5002729C7 /* objrtcmp.c */; };
+		E079436E170517A6002729C7 /* objrtcmp.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794216170517A5002729C7 /* objrtcmp.h */; };
+		E079436F170517A6002729C7 /* objrtfnx.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794217170517A5002729C7 /* objrtfnx.c */; };
+		E0794370170517A6002729C7 /* objrtfnx.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794218170517A5002729C7 /* objrtfnx.h */; };
+		E0794371170517A6002729C7 /* objrtgen.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794219170517A5002729C7 /* objrtgen.c */; };
+		E0794372170517A6002729C7 /* objrtgen.h in Headers */ = {isa = PBXBuildFile; fileRef = E079421A170517A5002729C7 /* objrtgen.h */; };
+		E0794373170517A6002729C7 /* objrtmch.c in Sources */ = {isa = PBXBuildFile; fileRef = E079421B170517A5002729C7 /* objrtmch.c */; };
+		E0794374170517A6002729C7 /* objrtmch.h in Headers */ = {isa = PBXBuildFile; fileRef = E079421C170517A5002729C7 /* objrtmch.h */; };
+		E0794375170517A6002729C7 /* parsefun.c in Sources */ = {isa = PBXBuildFile; fileRef = E079421D170517A5002729C7 /* parsefun.c */; };
+		E0794376170517A6002729C7 /* parsefun.h in Headers */ = {isa = PBXBuildFile; fileRef = E079421E170517A5002729C7 /* parsefun.h */; };
+		E0794377170517A6002729C7 /* pattern.c in Sources */ = {isa = PBXBuildFile; fileRef = E079421F170517A5002729C7 /* pattern.c */; };
+		E0794378170517A6002729C7 /* pattern.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794220170517A5002729C7 /* pattern.h */; };
+		E0794379170517A6002729C7 /* pprint.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794221170517A5002729C7 /* pprint.c */; };
+		E079437A170517A6002729C7 /* pprint.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794222170517A5002729C7 /* pprint.h */; };
+		E079437B170517A6002729C7 /* prccode.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794223170517A5002729C7 /* prccode.c */; };
+		E079437C170517A6002729C7 /* prccode.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794224170517A5002729C7 /* prccode.h */; };
+		E079437D170517A6002729C7 /* prcdrfun.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794225170517A5002729C7 /* prcdrfun.c */; };
+		E079437E170517A6002729C7 /* prcdrfun.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794226170517A5002729C7 /* prcdrfun.h */; };
+		E079437F170517A6002729C7 /* prcdrpsr.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794227170517A5002729C7 /* prcdrpsr.c */; };
+		E0794380170517A6002729C7 /* prcdrpsr.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794228170517A5002729C7 /* prcdrpsr.h */; };
+		E0794381170517A6002729C7 /* prdctfun.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794229170517A5002729C7 /* prdctfun.c */; };
+		E0794382170517A6002729C7 /* prdctfun.h in Headers */ = {isa = PBXBuildFile; fileRef = E079422A170517A5002729C7 /* prdctfun.h */; };
+		E0794383170517A6002729C7 /* prntutil.c in Sources */ = {isa = PBXBuildFile; fileRef = E079422B170517A5002729C7 /* prntutil.c */; };
+		E0794384170517A6002729C7 /* prntutil.h in Headers */ = {isa = PBXBuildFile; fileRef = E079422C170517A5002729C7 /* prntutil.h */; };
+		E0794385170517A6002729C7 /* proflfun.c in Sources */ = {isa = PBXBuildFile; fileRef = E079422D170517A5002729C7 /* proflfun.c */; };
+		E0794386170517A6002729C7 /* proflfun.h in Headers */ = {isa = PBXBuildFile; fileRef = E079422E170517A5002729C7 /* proflfun.h */; };
+		E0794387170517A6002729C7 /* reorder.c in Sources */ = {isa = PBXBuildFile; fileRef = E079422F170517A5002729C7 /* reorder.c */; };
+		E0794388170517A6002729C7 /* reorder.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794230170517A5002729C7 /* reorder.h */; };
+		E0794389170517A6002729C7 /* reteutil.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794231170517A5002729C7 /* reteutil.c */; };
+		E079438A170517A6002729C7 /* reteutil.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794232170517A5002729C7 /* reteutil.h */; };
+		E079438B170517A6002729C7 /* retract.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794233170517A5002729C7 /* retract.c */; };
+		E079438C170517A6002729C7 /* retract.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794234170517A5002729C7 /* retract.h */; };
+		E079438D170517A6002729C7 /* router.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794235170517A5002729C7 /* router.c */; };
+		E079438E170517A6002729C7 /* router.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794236170517A5002729C7 /* router.h */; };
+		E079438F170517A6002729C7 /* rulebin.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794237170517A5002729C7 /* rulebin.c */; };
+		E0794390170517A6002729C7 /* rulebin.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794238170517A5002729C7 /* rulebin.h */; };
+		E0794391170517A6002729C7 /* rulebld.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794239170517A5002729C7 /* rulebld.c */; };
+		E0794392170517A6002729C7 /* rulebld.h in Headers */ = {isa = PBXBuildFile; fileRef = E079423A170517A5002729C7 /* rulebld.h */; };
+		E0794393170517A6002729C7 /* rulebsc.c in Sources */ = {isa = PBXBuildFile; fileRef = E079423B170517A5002729C7 /* rulebsc.c */; };
+		E0794394170517A6002729C7 /* rulebsc.h in Headers */ = {isa = PBXBuildFile; fileRef = E079423C170517A5002729C7 /* rulebsc.h */; };
+		E0794395170517A6002729C7 /* rulecmp.c in Sources */ = {isa = PBXBuildFile; fileRef = E079423D170517A5002729C7 /* rulecmp.c */; };
+		E0794396170517A6002729C7 /* rulecmp.h in Headers */ = {isa = PBXBuildFile; fileRef = E079423E170517A5002729C7 /* rulecmp.h */; };
+		E0794397170517A6002729C7 /* rulecom.c in Sources */ = {isa = PBXBuildFile; fileRef = E079423F170517A5002729C7 /* rulecom.c */; };
+		E0794398170517A6002729C7 /* rulecom.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794240170517A5002729C7 /* rulecom.h */; };
+		E0794399170517A6002729C7 /* rulecstr.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794241170517A5002729C7 /* rulecstr.c */; };
+		E079439A170517A6002729C7 /* rulecstr.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794242170517A5002729C7 /* rulecstr.h */; };
+		E079439B170517A6002729C7 /* ruledef.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794243170517A5002729C7 /* ruledef.c */; };
+		E079439C170517A6002729C7 /* ruledef.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794244170517A5002729C7 /* ruledef.h */; };
+		E079439D170517A6002729C7 /* ruledlt.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794245170517A5002729C7 /* ruledlt.c */; };
+		E079439E170517A6002729C7 /* ruledlt.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794246170517A5002729C7 /* ruledlt.h */; };
+		E079439F170517A6002729C7 /* rulelhs.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794247170517A5002729C7 /* rulelhs.c */; };
+		E07943A0170517A6002729C7 /* rulelhs.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794248170517A5002729C7 /* rulelhs.h */; };
+		E07943A1170517A6002729C7 /* rulepsr.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794249170517A5002729C7 /* rulepsr.c */; };
+		E07943A2170517A6002729C7 /* rulepsr.h in Headers */ = {isa = PBXBuildFile; fileRef = E079424A170517A5002729C7 /* rulepsr.h */; };
+		E07943A3170517A6002729C7 /* scanner.c in Sources */ = {isa = PBXBuildFile; fileRef = E079424B170517A5002729C7 /* scanner.c */; };
+		E07943A4170517A6002729C7 /* scanner.h in Headers */ = {isa = PBXBuildFile; fileRef = E079424C170517A5002729C7 /* scanner.h */; };
+		E07943A5170517A6002729C7 /* setup.h in Headers */ = {isa = PBXBuildFile; fileRef = E079424D170517A5002729C7 /* setup.h */; };
+		E07943A6170517A6002729C7 /* shrtlnkn.h in Headers */ = {isa = PBXBuildFile; fileRef = E079424E170517A5002729C7 /* shrtlnkn.h */; };
+		E07943A7170517A6002729C7 /* sortfun.c in Sources */ = {isa = PBXBuildFile; fileRef = E079424F170517A5002729C7 /* sortfun.c */; };
+		E07943A8170517A6002729C7 /* sortfun.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794250170517A5002729C7 /* sortfun.h */; };
+		E07943A9170517A6002729C7 /* strngfun.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794251170517A5002729C7 /* strngfun.c */; };
+		E07943AA170517A6002729C7 /* strngfun.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794252170517A5002729C7 /* strngfun.h */; };
+		E07943AB170517A6002729C7 /* strngrtr.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794253170517A5002729C7 /* strngrtr.c */; };
+		E07943AC170517A6002729C7 /* strngrtr.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794254170517A5002729C7 /* strngrtr.h */; };
+		E07943AD170517A6002729C7 /* symblbin.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794255170517A5002729C7 /* symblbin.c */; };
+		E07943AE170517A6002729C7 /* symblbin.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794256170517A5002729C7 /* symblbin.h */; };
+		E07943AF170517A6002729C7 /* symblcmp.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794257170517A5002729C7 /* symblcmp.c */; };
+		E07943B0170517A6002729C7 /* symblcmp.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794258170517A5002729C7 /* symblcmp.h */; };
+		E07943B1170517A6002729C7 /* symbol.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794259170517A5002729C7 /* symbol.c */; };
+		E07943B2170517A6002729C7 /* symbol.h in Headers */ = {isa = PBXBuildFile; fileRef = E079425A170517A5002729C7 /* symbol.h */; };
+		E07943B3170517A6002729C7 /* sysdep.c in Sources */ = {isa = PBXBuildFile; fileRef = E079425B170517A5002729C7 /* sysdep.c */; };
+		E07943B4170517A6002729C7 /* sysdep.h in Headers */ = {isa = PBXBuildFile; fileRef = E079425C170517A5002729C7 /* sysdep.h */; };
+		E07943B5170517A6002729C7 /* textpro.c in Sources */ = {isa = PBXBuildFile; fileRef = E079425D170517A5002729C7 /* textpro.c */; };
+		E07943B6170517A6002729C7 /* textpro.h in Headers */ = {isa = PBXBuildFile; fileRef = E079425E170517A5002729C7 /* textpro.h */; };
+		E07943B7170517A6002729C7 /* tmpltbin.c in Sources */ = {isa = PBXBuildFile; fileRef = E079425F170517A5002729C7 /* tmpltbin.c */; };
+		E07943B8170517A6002729C7 /* tmpltbin.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794260170517A5002729C7 /* tmpltbin.h */; };
+		E07943B9170517A6002729C7 /* tmpltbsc.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794261170517A5002729C7 /* tmpltbsc.c */; };
+		E07943BA170517A6002729C7 /* tmpltbsc.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794262170517A5002729C7 /* tmpltbsc.h */; };
+		E07943BB170517A6002729C7 /* tmpltcmp.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794263170517A5002729C7 /* tmpltcmp.c */; };
+		E07943BC170517A6002729C7 /* tmpltcmp.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794264170517A5002729C7 /* tmpltcmp.h */; };
+		E07943BD170517A6002729C7 /* tmpltdef.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794265170517A5002729C7 /* tmpltdef.c */; };
+		E07943BE170517A6002729C7 /* tmpltdef.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794266170517A5002729C7 /* tmpltdef.h */; };
+		E07943BF170517A6002729C7 /* tmpltfun.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794267170517A5002729C7 /* tmpltfun.c */; };
+		E07943C0170517A6002729C7 /* tmpltfun.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794268170517A5002729C7 /* tmpltfun.h */; };
+		E07943C1170517A6002729C7 /* tmpltlhs.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794269170517A5002729C7 /* tmpltlhs.c */; };
+		E07943C2170517A6002729C7 /* tmpltlhs.h in Headers */ = {isa = PBXBuildFile; fileRef = E079426A170517A5002729C7 /* tmpltlhs.h */; };
+		E07943C3170517A6002729C7 /* tmpltpsr.c in Sources */ = {isa = PBXBuildFile; fileRef = E079426B170517A5002729C7 /* tmpltpsr.c */; };
+		E07943C4170517A6002729C7 /* tmpltpsr.h in Headers */ = {isa = PBXBuildFile; fileRef = E079426C170517A5002729C7 /* tmpltpsr.h */; };
+		E07943C5170517A6002729C7 /* tmpltrhs.c in Sources */ = {isa = PBXBuildFile; fileRef = E079426D170517A5002729C7 /* tmpltrhs.c */; };
+		E07943C6170517A6002729C7 /* tmpltrhs.h in Headers */ = {isa = PBXBuildFile; fileRef = E079426E170517A5002729C7 /* tmpltrhs.h */; };
+		E07943C7170517A6002729C7 /* tmpltutl.c in Sources */ = {isa = PBXBuildFile; fileRef = E079426F170517A5002729C7 /* tmpltutl.c */; };
+		E07943C8170517A6002729C7 /* tmpltutl.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794270170517A5002729C7 /* tmpltutl.h */; };
+		E07943C9170517A6002729C7 /* userdata.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794271170517A5002729C7 /* userdata.c */; };
+		E07943CA170517A6002729C7 /* userdata.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794272170517A5002729C7 /* userdata.h */; };
+		E07943CB170517A6002729C7 /* userfunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794273170517A5002729C7 /* userfunctions.c */; };
+		E07943CC170517A6002729C7 /* usrsetup.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794274170517A5002729C7 /* usrsetup.h */; };
+		E07943CD170517A6002729C7 /* utility.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794275170517A5002729C7 /* utility.c */; };
+		E07943CE170517A6002729C7 /* utility.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794276170517A5002729C7 /* utility.h */; };
+		E07943CF170517A6002729C7 /* watch.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794277170517A5002729C7 /* watch.c */; };
+		E07943D0170517A6002729C7 /* watch.h in Headers */ = {isa = PBXBuildFile; fileRef = E0794278170517A5002729C7 /* watch.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +379,356 @@
 		E079396A170500A4002729C7 /* CLIPS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CLIPS-Info.plist"; sourceTree = "<group>"; };
 		E079396C170500A4002729C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E079396E170500A4002729C7 /* CLIPS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CLIPS-Prefix.pch"; sourceTree = "<group>"; };
-		E079396F170500A4002729C7 /* CLIPS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLIPS.h; sourceTree = "<group>"; };
-		E0793970170500A4002729C7 /* CLIPS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLIPS.m; sourceTree = "<group>"; };
 		E0793977170500A5002729C7 /* CLIPSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CLIPSTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0793978170500A5002729C7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		E0793980170500A5002729C7 /* CLIPSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CLIPSTests-Info.plist"; sourceTree = "<group>"; };
 		E0793982170500A5002729C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E0793984170500A5002729C7 /* CLIPSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLIPSTests.h; sourceTree = "<group>"; };
 		E0793985170500A5002729C7 /* CLIPSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLIPSTests.m; sourceTree = "<group>"; };
+		E0794121170517A5002729C7 /* agenda.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = agenda.c; sourceTree = "<group>"; };
+		E0794122170517A5002729C7 /* agenda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = agenda.h; sourceTree = "<group>"; };
+		E0794123170517A5002729C7 /* analysis.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = analysis.c; sourceTree = "<group>"; };
+		E0794124170517A5002729C7 /* analysis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = analysis.h; sourceTree = "<group>"; };
+		E0794125170517A5002729C7 /* argacces.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = argacces.c; sourceTree = "<group>"; };
+		E0794126170517A5002729C7 /* argacces.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = argacces.h; sourceTree = "<group>"; };
+		E0794127170517A5002729C7 /* bload.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bload.c; sourceTree = "<group>"; };
+		E0794128170517A5002729C7 /* bload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bload.h; sourceTree = "<group>"; };
+		E0794129170517A5002729C7 /* bmathfun.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bmathfun.c; sourceTree = "<group>"; };
+		E079412A170517A5002729C7 /* bmathfun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmathfun.h; sourceTree = "<group>"; };
+		E079412B170517A5002729C7 /* bsave.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bsave.c; sourceTree = "<group>"; };
+		E079412C170517A5002729C7 /* bsave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bsave.h; sourceTree = "<group>"; };
+		E079412D170517A5002729C7 /* classcom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = classcom.c; sourceTree = "<group>"; };
+		E079412E170517A5002729C7 /* classcom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = classcom.h; sourceTree = "<group>"; };
+		E079412F170517A5002729C7 /* classexm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = classexm.c; sourceTree = "<group>"; };
+		E0794130170517A5002729C7 /* classexm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = classexm.h; sourceTree = "<group>"; };
+		E0794131170517A5002729C7 /* classfun.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = classfun.c; sourceTree = "<group>"; };
+		E0794132170517A5002729C7 /* classfun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = classfun.h; sourceTree = "<group>"; };
+		E0794133170517A5002729C7 /* classinf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = classinf.c; sourceTree = "<group>"; };
+		E0794134170517A5002729C7 /* classinf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = classinf.h; sourceTree = "<group>"; };
+		E0794135170517A5002729C7 /* classini.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = classini.c; sourceTree = "<group>"; };
+		E0794136170517A5002729C7 /* classini.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = classini.h; sourceTree = "<group>"; };
+		E0794137170517A5002729C7 /* classpsr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = classpsr.c; sourceTree = "<group>"; };
+		E0794138170517A5002729C7 /* classpsr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = classpsr.h; sourceTree = "<group>"; };
+		E0794139170517A5002729C7 /* clips.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = clips.h; sourceTree = "<group>"; };
+		E079413A170517A5002729C7 /* CLIPSEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLIPSEnvironment.h; sourceTree = "<group>"; };
+		E079413B170517A5002729C7 /* CLIPSEnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLIPSEnvironment.m; sourceTree = "<group>"; };
+		E079413C170517A5002729C7 /* clsltpsr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = clsltpsr.c; sourceTree = "<group>"; };
+		E079413D170517A5002729C7 /* clsltpsr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = clsltpsr.h; sourceTree = "<group>"; };
+		E079413E170517A5002729C7 /* cmptblty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmptblty.h; sourceTree = "<group>"; };
+		E079413F170517A5002729C7 /* commline.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = commline.c; sourceTree = "<group>"; };
+		E0794140170517A5002729C7 /* commline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commline.h; sourceTree = "<group>"; };
+		E0794141170517A5002729C7 /* conscomp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = conscomp.c; sourceTree = "<group>"; };
+		E0794142170517A5002729C7 /* conscomp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = conscomp.h; sourceTree = "<group>"; };
+		E0794143170517A5002729C7 /* constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constant.h; sourceTree = "<group>"; };
+		E0794144170517A5002729C7 /* constrct.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = constrct.c; sourceTree = "<group>"; };
+		E0794145170517A5002729C7 /* constrct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constrct.h; sourceTree = "<group>"; };
+		E0794146170517A5002729C7 /* constrnt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = constrnt.c; sourceTree = "<group>"; };
+		E0794147170517A5002729C7 /* constrnt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constrnt.h; sourceTree = "<group>"; };
+		E0794148170517A5002729C7 /* crstrtgy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = crstrtgy.c; sourceTree = "<group>"; };
+		E0794149170517A5002729C7 /* crstrtgy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crstrtgy.h; sourceTree = "<group>"; };
+		E079414A170517A5002729C7 /* cstrcbin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cstrcbin.c; sourceTree = "<group>"; };
+		E079414B170517A5002729C7 /* cstrcbin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cstrcbin.h; sourceTree = "<group>"; };
+		E079414C170517A5002729C7 /* cstrccmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cstrccmp.h; sourceTree = "<group>"; };
+		E079414D170517A5002729C7 /* cstrccom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cstrccom.c; sourceTree = "<group>"; };
+		E079414E170517A5002729C7 /* cstrccom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cstrccom.h; sourceTree = "<group>"; };
+		E079414F170517A5002729C7 /* cstrcpsr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cstrcpsr.c; sourceTree = "<group>"; };
+		E0794150170517A5002729C7 /* cstrcpsr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cstrcpsr.h; sourceTree = "<group>"; };
+		E0794151170517A5002729C7 /* cstrnbin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cstrnbin.c; sourceTree = "<group>"; };
+		E0794152170517A5002729C7 /* cstrnbin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cstrnbin.h; sourceTree = "<group>"; };
+		E0794153170517A5002729C7 /* cstrnchk.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cstrnchk.c; sourceTree = "<group>"; };
+		E0794154170517A5002729C7 /* cstrnchk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cstrnchk.h; sourceTree = "<group>"; };
+		E0794155170517A5002729C7 /* cstrncmp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cstrncmp.c; sourceTree = "<group>"; };
+		E0794156170517A5002729C7 /* cstrncmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cstrncmp.h; sourceTree = "<group>"; };
+		E0794157170517A5002729C7 /* cstrnops.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cstrnops.c; sourceTree = "<group>"; };
+		E0794158170517A5002729C7 /* cstrnops.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cstrnops.h; sourceTree = "<group>"; };
+		E0794159170517A5002729C7 /* cstrnpsr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cstrnpsr.c; sourceTree = "<group>"; };
+		E079415A170517A5002729C7 /* cstrnpsr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cstrnpsr.h; sourceTree = "<group>"; };
+		E079415B170517A5002729C7 /* cstrnutl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cstrnutl.c; sourceTree = "<group>"; };
+		E079415C170517A5002729C7 /* cstrnutl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cstrnutl.h; sourceTree = "<group>"; };
+		E079415D170517A5002729C7 /* default.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = default.c; sourceTree = "<group>"; };
+		E079415E170517A5002729C7 /* default.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = default.h; sourceTree = "<group>"; };
+		E079415F170517A5002729C7 /* defins.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = defins.c; sourceTree = "<group>"; };
+		E0794160170517A5002729C7 /* defins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = defins.h; sourceTree = "<group>"; };
+		E0794161170517A5002729C7 /* developr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = developr.c; sourceTree = "<group>"; };
+		E0794162170517A5002729C7 /* developr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = developr.h; sourceTree = "<group>"; };
+		E0794163170517A5002729C7 /* dffctbin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dffctbin.c; sourceTree = "<group>"; };
+		E0794164170517A5002729C7 /* dffctbin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dffctbin.h; sourceTree = "<group>"; };
+		E0794165170517A5002729C7 /* dffctbsc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dffctbsc.c; sourceTree = "<group>"; };
+		E0794166170517A5002729C7 /* dffctbsc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dffctbsc.h; sourceTree = "<group>"; };
+		E0794167170517A5002729C7 /* dffctcmp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dffctcmp.c; sourceTree = "<group>"; };
+		E0794168170517A5002729C7 /* dffctcmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dffctcmp.h; sourceTree = "<group>"; };
+		E0794169170517A5002729C7 /* dffctdef.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dffctdef.c; sourceTree = "<group>"; };
+		E079416A170517A5002729C7 /* dffctdef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dffctdef.h; sourceTree = "<group>"; };
+		E079416B170517A5002729C7 /* dffctpsr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dffctpsr.c; sourceTree = "<group>"; };
+		E079416C170517A5002729C7 /* dffctpsr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dffctpsr.h; sourceTree = "<group>"; };
+		E079416D170517A5002729C7 /* dffnxbin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dffnxbin.c; sourceTree = "<group>"; };
+		E079416E170517A5002729C7 /* dffnxbin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dffnxbin.h; sourceTree = "<group>"; };
+		E079416F170517A5002729C7 /* dffnxcmp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dffnxcmp.c; sourceTree = "<group>"; };
+		E0794170170517A5002729C7 /* dffnxcmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dffnxcmp.h; sourceTree = "<group>"; };
+		E0794171170517A5002729C7 /* dffnxexe.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dffnxexe.c; sourceTree = "<group>"; };
+		E0794172170517A5002729C7 /* dffnxexe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dffnxexe.h; sourceTree = "<group>"; };
+		E0794173170517A5002729C7 /* dffnxfun.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dffnxfun.c; sourceTree = "<group>"; };
+		E0794174170517A5002729C7 /* dffnxfun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dffnxfun.h; sourceTree = "<group>"; };
+		E0794175170517A5002729C7 /* dffnxpsr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dffnxpsr.c; sourceTree = "<group>"; };
+		E0794176170517A5002729C7 /* dffnxpsr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dffnxpsr.h; sourceTree = "<group>"; };
+		E0794177170517A5002729C7 /* dfinsbin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dfinsbin.c; sourceTree = "<group>"; };
+		E0794178170517A5002729C7 /* dfinsbin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dfinsbin.h; sourceTree = "<group>"; };
+		E0794179170517A5002729C7 /* dfinscmp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dfinscmp.c; sourceTree = "<group>"; };
+		E079417A170517A5002729C7 /* dfinscmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dfinscmp.h; sourceTree = "<group>"; };
+		E079417B170517A5002729C7 /* drive.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = drive.c; sourceTree = "<group>"; };
+		E079417C170517A5002729C7 /* drive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = drive.h; sourceTree = "<group>"; };
+		E079417D170517A5002729C7 /* ed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ed.h; sourceTree = "<group>"; };
+		E079417E170517A5002729C7 /* edbasic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = edbasic.c; sourceTree = "<group>"; };
+		E079417F170517A5002729C7 /* edmain.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = edmain.c; sourceTree = "<group>"; };
+		E0794180170517A5002729C7 /* edmisc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = edmisc.c; sourceTree = "<group>"; };
+		E0794181170517A5002729C7 /* edstruct.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = edstruct.c; sourceTree = "<group>"; };
+		E0794182170517A5002729C7 /* edterm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = edterm.c; sourceTree = "<group>"; };
+		E0794183170517A5002729C7 /* emathfun.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = emathfun.c; sourceTree = "<group>"; };
+		E0794184170517A5002729C7 /* emathfun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = emathfun.h; sourceTree = "<group>"; };
+		E0794185170517A5002729C7 /* engine.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = engine.c; sourceTree = "<group>"; };
+		E0794186170517A5002729C7 /* engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = engine.h; sourceTree = "<group>"; };
+		E0794187170517A5002729C7 /* envrnmnt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = envrnmnt.c; sourceTree = "<group>"; };
+		E0794188170517A5002729C7 /* envrnmnt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = envrnmnt.h; sourceTree = "<group>"; };
+		E0794189170517A5002729C7 /* evaluatn.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = evaluatn.c; sourceTree = "<group>"; };
+		E079418A170517A5002729C7 /* evaluatn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = evaluatn.h; sourceTree = "<group>"; };
+		E079418B170517A5002729C7 /* expressn.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = expressn.c; sourceTree = "<group>"; };
+		E079418C170517A5002729C7 /* expressn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expressn.h; sourceTree = "<group>"; };
+		E079418D170517A5002729C7 /* exprnbin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = exprnbin.c; sourceTree = "<group>"; };
+		E079418E170517A5002729C7 /* exprnbin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exprnbin.h; sourceTree = "<group>"; };
+		E079418F170517A5002729C7 /* exprnops.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = exprnops.c; sourceTree = "<group>"; };
+		E0794190170517A5002729C7 /* exprnops.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exprnops.h; sourceTree = "<group>"; };
+		E0794191170517A5002729C7 /* exprnpsr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = exprnpsr.c; sourceTree = "<group>"; };
+		E0794192170517A5002729C7 /* exprnpsr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exprnpsr.h; sourceTree = "<group>"; };
+		E0794193170517A5002729C7 /* extnfunc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = extnfunc.c; sourceTree = "<group>"; };
+		E0794194170517A5002729C7 /* extnfunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = extnfunc.h; sourceTree = "<group>"; };
+		E0794195170517A5002729C7 /* factbin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = factbin.c; sourceTree = "<group>"; };
+		E0794196170517A5002729C7 /* factbin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = factbin.h; sourceTree = "<group>"; };
+		E0794197170517A5002729C7 /* factbld.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = factbld.c; sourceTree = "<group>"; };
+		E0794198170517A5002729C7 /* factbld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = factbld.h; sourceTree = "<group>"; };
+		E0794199170517A5002729C7 /* factcmp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = factcmp.c; sourceTree = "<group>"; };
+		E079419A170517A5002729C7 /* factcmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = factcmp.h; sourceTree = "<group>"; };
+		E079419B170517A5002729C7 /* factcom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = factcom.c; sourceTree = "<group>"; };
+		E079419C170517A5002729C7 /* factcom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = factcom.h; sourceTree = "<group>"; };
+		E079419D170517A5002729C7 /* factfun.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = factfun.c; sourceTree = "<group>"; };
+		E079419E170517A5002729C7 /* factfun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = factfun.h; sourceTree = "<group>"; };
+		E079419F170517A5002729C7 /* factgen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = factgen.c; sourceTree = "<group>"; };
+		E07941A0170517A5002729C7 /* factgen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = factgen.h; sourceTree = "<group>"; };
+		E07941A1170517A5002729C7 /* facthsh.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = facthsh.c; sourceTree = "<group>"; };
+		E07941A2170517A5002729C7 /* facthsh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = facthsh.h; sourceTree = "<group>"; };
+		E07941A3170517A5002729C7 /* factlhs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = factlhs.c; sourceTree = "<group>"; };
+		E07941A4170517A5002729C7 /* factlhs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = factlhs.h; sourceTree = "<group>"; };
+		E07941A5170517A5002729C7 /* factmch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = factmch.c; sourceTree = "<group>"; };
+		E07941A6170517A5002729C7 /* factmch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = factmch.h; sourceTree = "<group>"; };
+		E07941A7170517A5002729C7 /* factmngr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = factmngr.c; sourceTree = "<group>"; };
+		E07941A8170517A5002729C7 /* factmngr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = factmngr.h; sourceTree = "<group>"; };
+		E07941A9170517A5002729C7 /* factprt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = factprt.c; sourceTree = "<group>"; };
+		E07941AA170517A5002729C7 /* factprt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = factprt.h; sourceTree = "<group>"; };
+		E07941AB170517A5002729C7 /* factqpsr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = factqpsr.c; sourceTree = "<group>"; };
+		E07941AC170517A5002729C7 /* factqpsr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = factqpsr.h; sourceTree = "<group>"; };
+		E07941AD170517A5002729C7 /* factqury.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = factqury.c; sourceTree = "<group>"; };
+		E07941AE170517A5002729C7 /* factqury.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = factqury.h; sourceTree = "<group>"; };
+		E07941AF170517A5002729C7 /* factrete.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = factrete.c; sourceTree = "<group>"; };
+		E07941B0170517A5002729C7 /* factrete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = factrete.h; sourceTree = "<group>"; };
+		E07941B1170517A5002729C7 /* factrhs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = factrhs.c; sourceTree = "<group>"; };
+		E07941B2170517A5002729C7 /* factrhs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = factrhs.h; sourceTree = "<group>"; };
+		E07941B3170517A5002729C7 /* filecom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = filecom.c; sourceTree = "<group>"; };
+		E07941B4170517A5002729C7 /* filecom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filecom.h; sourceTree = "<group>"; };
+		E07941B5170517A5002729C7 /* filertr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = filertr.c; sourceTree = "<group>"; };
+		E07941B6170517A5002729C7 /* filertr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filertr.h; sourceTree = "<group>"; };
+		E07941B7170517A5002729C7 /* generate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = generate.c; sourceTree = "<group>"; };
+		E07941B8170517A5002729C7 /* generate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = generate.h; sourceTree = "<group>"; };
+		E07941B9170517A5002729C7 /* genrcbin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = genrcbin.c; sourceTree = "<group>"; };
+		E07941BA170517A5002729C7 /* genrcbin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = genrcbin.h; sourceTree = "<group>"; };
+		E07941BB170517A5002729C7 /* genrccmp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = genrccmp.c; sourceTree = "<group>"; };
+		E07941BC170517A5002729C7 /* genrccmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = genrccmp.h; sourceTree = "<group>"; };
+		E07941BD170517A5002729C7 /* genrccom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = genrccom.c; sourceTree = "<group>"; };
+		E07941BE170517A5002729C7 /* genrccom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = genrccom.h; sourceTree = "<group>"; };
+		E07941BF170517A5002729C7 /* genrcexe.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = genrcexe.c; sourceTree = "<group>"; };
+		E07941C0170517A5002729C7 /* genrcexe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = genrcexe.h; sourceTree = "<group>"; };
+		E07941C1170517A5002729C7 /* genrcfun.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = genrcfun.c; sourceTree = "<group>"; };
+		E07941C2170517A5002729C7 /* genrcfun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = genrcfun.h; sourceTree = "<group>"; };
+		E07941C3170517A5002729C7 /* genrcpsr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = genrcpsr.c; sourceTree = "<group>"; };
+		E07941C4170517A5002729C7 /* genrcpsr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = genrcpsr.h; sourceTree = "<group>"; };
+		E07941C5170517A5002729C7 /* globlbin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = globlbin.c; sourceTree = "<group>"; };
+		E07941C6170517A5002729C7 /* globlbin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globlbin.h; sourceTree = "<group>"; };
+		E07941C7170517A5002729C7 /* globlbsc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = globlbsc.c; sourceTree = "<group>"; };
+		E07941C8170517A5002729C7 /* globlbsc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globlbsc.h; sourceTree = "<group>"; };
+		E07941C9170517A5002729C7 /* globlcmp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = globlcmp.c; sourceTree = "<group>"; };
+		E07941CA170517A5002729C7 /* globlcmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globlcmp.h; sourceTree = "<group>"; };
+		E07941CB170517A5002729C7 /* globlcom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = globlcom.c; sourceTree = "<group>"; };
+		E07941CC170517A5002729C7 /* globlcom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globlcom.h; sourceTree = "<group>"; };
+		E07941CD170517A5002729C7 /* globldef.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = globldef.c; sourceTree = "<group>"; };
+		E07941CE170517A5002729C7 /* globldef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globldef.h; sourceTree = "<group>"; };
+		E07941CF170517A5002729C7 /* globlpsr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = globlpsr.c; sourceTree = "<group>"; };
+		E07941D0170517A5002729C7 /* globlpsr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globlpsr.h; sourceTree = "<group>"; };
+		E07941D1170517A5002729C7 /* immthpsr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = immthpsr.c; sourceTree = "<group>"; };
+		E07941D2170517A5002729C7 /* immthpsr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = immthpsr.h; sourceTree = "<group>"; };
+		E07941D3170517A5002729C7 /* incrrset.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = incrrset.c; sourceTree = "<group>"; };
+		E07941D4170517A5002729C7 /* incrrset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = incrrset.h; sourceTree = "<group>"; };
+		E07941D5170517A5002729C7 /* inherpsr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = inherpsr.c; sourceTree = "<group>"; };
+		E07941D6170517A5002729C7 /* inherpsr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = inherpsr.h; sourceTree = "<group>"; };
+		E07941D7170517A5002729C7 /* inscom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = inscom.c; sourceTree = "<group>"; };
+		E07941D8170517A5002729C7 /* inscom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = inscom.h; sourceTree = "<group>"; };
+		E07941D9170517A5002729C7 /* insfile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = insfile.c; sourceTree = "<group>"; };
+		E07941DA170517A5002729C7 /* insfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = insfile.h; sourceTree = "<group>"; };
+		E07941DB170517A5002729C7 /* insfun.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = insfun.c; sourceTree = "<group>"; };
+		E07941DC170517A5002729C7 /* insfun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = insfun.h; sourceTree = "<group>"; };
+		E07941DD170517A5002729C7 /* insmngr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = insmngr.c; sourceTree = "<group>"; };
+		E07941DE170517A5002729C7 /* insmngr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = insmngr.h; sourceTree = "<group>"; };
+		E07941DF170517A5002729C7 /* insmoddp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = insmoddp.c; sourceTree = "<group>"; };
+		E07941E0170517A5002729C7 /* insmoddp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = insmoddp.h; sourceTree = "<group>"; };
+		E07941E1170517A5002729C7 /* insmult.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = insmult.c; sourceTree = "<group>"; };
+		E07941E2170517A5002729C7 /* insmult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = insmult.h; sourceTree = "<group>"; };
+		E07941E3170517A5002729C7 /* inspsr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = inspsr.c; sourceTree = "<group>"; };
+		E07941E4170517A5002729C7 /* inspsr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = inspsr.h; sourceTree = "<group>"; };
+		E07941E5170517A5002729C7 /* insquery.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = insquery.c; sourceTree = "<group>"; };
+		E07941E6170517A5002729C7 /* insquery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = insquery.h; sourceTree = "<group>"; };
+		E07941E7170517A5002729C7 /* insqypsr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = insqypsr.c; sourceTree = "<group>"; };
+		E07941E8170517A5002729C7 /* insqypsr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = insqypsr.h; sourceTree = "<group>"; };
+		E07941E9170517A5002729C7 /* iofun.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = iofun.c; sourceTree = "<group>"; };
+		E07941EA170517A5002729C7 /* iofun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iofun.h; sourceTree = "<group>"; };
+		E07941EB170517A5002729C7 /* lgcldpnd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lgcldpnd.c; sourceTree = "<group>"; };
+		E07941EC170517A5002729C7 /* lgcldpnd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lgcldpnd.h; sourceTree = "<group>"; };
+		E07941ED170517A5002729C7 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		E07941EE170517A5002729C7 /* match.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = match.h; sourceTree = "<group>"; };
+		E07941EF170517A5002729C7 /* memalloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = memalloc.c; sourceTree = "<group>"; };
+		E07941F0170517A5002729C7 /* memalloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = memalloc.h; sourceTree = "<group>"; };
+		E07941F1170517A5002729C7 /* miscfun.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = miscfun.c; sourceTree = "<group>"; };
+		E07941F2170517A5002729C7 /* miscfun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = miscfun.h; sourceTree = "<group>"; };
+		E07941F3170517A5002729C7 /* modulbin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = modulbin.c; sourceTree = "<group>"; };
+		E07941F4170517A5002729C7 /* modulbin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modulbin.h; sourceTree = "<group>"; };
+		E07941F5170517A5002729C7 /* modulbsc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = modulbsc.c; sourceTree = "<group>"; };
+		E07941F6170517A5002729C7 /* modulbsc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modulbsc.h; sourceTree = "<group>"; };
+		E07941F7170517A5002729C7 /* modulcmp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = modulcmp.c; sourceTree = "<group>"; };
+		E07941F8170517A5002729C7 /* modulcmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modulcmp.h; sourceTree = "<group>"; };
+		E07941F9170517A5002729C7 /* moduldef.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = moduldef.c; sourceTree = "<group>"; };
+		E07941FA170517A5002729C7 /* moduldef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = moduldef.h; sourceTree = "<group>"; };
+		E07941FB170517A5002729C7 /* modulpsr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = modulpsr.c; sourceTree = "<group>"; };
+		E07941FC170517A5002729C7 /* modulpsr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modulpsr.h; sourceTree = "<group>"; };
+		E07941FD170517A5002729C7 /* modulutl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = modulutl.c; sourceTree = "<group>"; };
+		E07941FE170517A5002729C7 /* modulutl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modulutl.h; sourceTree = "<group>"; };
+		E07941FF170517A5002729C7 /* msgcom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = msgcom.c; sourceTree = "<group>"; };
+		E0794200170517A5002729C7 /* msgcom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msgcom.h; sourceTree = "<group>"; };
+		E0794201170517A5002729C7 /* msgfun.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = msgfun.c; sourceTree = "<group>"; };
+		E0794202170517A5002729C7 /* msgfun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msgfun.h; sourceTree = "<group>"; };
+		E0794203170517A5002729C7 /* msgpass.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = msgpass.c; sourceTree = "<group>"; };
+		E0794204170517A5002729C7 /* msgpass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msgpass.h; sourceTree = "<group>"; };
+		E0794205170517A5002729C7 /* msgpsr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = msgpsr.c; sourceTree = "<group>"; };
+		E0794206170517A5002729C7 /* msgpsr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msgpsr.h; sourceTree = "<group>"; };
+		E0794207170517A5002729C7 /* multifld.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = multifld.c; sourceTree = "<group>"; };
+		E0794208170517A5002729C7 /* multifld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = multifld.h; sourceTree = "<group>"; };
+		E0794209170517A5002729C7 /* multifun.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = multifun.c; sourceTree = "<group>"; };
+		E079420A170517A5002729C7 /* multifun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = multifun.h; sourceTree = "<group>"; };
+		E079420B170517A5002729C7 /* network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = network.h; sourceTree = "<group>"; };
+		E079420C170517A5002729C7 /* objbin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = objbin.c; sourceTree = "<group>"; };
+		E079420D170517A5002729C7 /* objbin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objbin.h; sourceTree = "<group>"; };
+		E079420E170517A5002729C7 /* objcmp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = objcmp.c; sourceTree = "<group>"; };
+		E079420F170517A5002729C7 /* objcmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objcmp.h; sourceTree = "<group>"; };
+		E0794210170517A5002729C7 /* object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = object.h; sourceTree = "<group>"; };
+		E0794211170517A5002729C7 /* objrtbin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = objrtbin.c; sourceTree = "<group>"; };
+		E0794212170517A5002729C7 /* objrtbin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objrtbin.h; sourceTree = "<group>"; };
+		E0794213170517A5002729C7 /* objrtbld.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = objrtbld.c; sourceTree = "<group>"; };
+		E0794214170517A5002729C7 /* objrtbld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objrtbld.h; sourceTree = "<group>"; };
+		E0794215170517A5002729C7 /* objrtcmp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = objrtcmp.c; sourceTree = "<group>"; };
+		E0794216170517A5002729C7 /* objrtcmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objrtcmp.h; sourceTree = "<group>"; };
+		E0794217170517A5002729C7 /* objrtfnx.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = objrtfnx.c; sourceTree = "<group>"; };
+		E0794218170517A5002729C7 /* objrtfnx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objrtfnx.h; sourceTree = "<group>"; };
+		E0794219170517A5002729C7 /* objrtgen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = objrtgen.c; sourceTree = "<group>"; };
+		E079421A170517A5002729C7 /* objrtgen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objrtgen.h; sourceTree = "<group>"; };
+		E079421B170517A5002729C7 /* objrtmch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = objrtmch.c; sourceTree = "<group>"; };
+		E079421C170517A5002729C7 /* objrtmch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objrtmch.h; sourceTree = "<group>"; };
+		E079421D170517A5002729C7 /* parsefun.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = parsefun.c; sourceTree = "<group>"; };
+		E079421E170517A5002729C7 /* parsefun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parsefun.h; sourceTree = "<group>"; };
+		E079421F170517A5002729C7 /* pattern.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pattern.c; sourceTree = "<group>"; };
+		E0794220170517A5002729C7 /* pattern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pattern.h; sourceTree = "<group>"; };
+		E0794221170517A5002729C7 /* pprint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pprint.c; sourceTree = "<group>"; };
+		E0794222170517A5002729C7 /* pprint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pprint.h; sourceTree = "<group>"; };
+		E0794223170517A5002729C7 /* prccode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = prccode.c; sourceTree = "<group>"; };
+		E0794224170517A5002729C7 /* prccode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prccode.h; sourceTree = "<group>"; };
+		E0794225170517A5002729C7 /* prcdrfun.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = prcdrfun.c; sourceTree = "<group>"; };
+		E0794226170517A5002729C7 /* prcdrfun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prcdrfun.h; sourceTree = "<group>"; };
+		E0794227170517A5002729C7 /* prcdrpsr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = prcdrpsr.c; sourceTree = "<group>"; };
+		E0794228170517A5002729C7 /* prcdrpsr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prcdrpsr.h; sourceTree = "<group>"; };
+		E0794229170517A5002729C7 /* prdctfun.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = prdctfun.c; sourceTree = "<group>"; };
+		E079422A170517A5002729C7 /* prdctfun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prdctfun.h; sourceTree = "<group>"; };
+		E079422B170517A5002729C7 /* prntutil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = prntutil.c; sourceTree = "<group>"; };
+		E079422C170517A5002729C7 /* prntutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prntutil.h; sourceTree = "<group>"; };
+		E079422D170517A5002729C7 /* proflfun.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = proflfun.c; sourceTree = "<group>"; };
+		E079422E170517A5002729C7 /* proflfun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = proflfun.h; sourceTree = "<group>"; };
+		E079422F170517A5002729C7 /* reorder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = reorder.c; sourceTree = "<group>"; };
+		E0794230170517A5002729C7 /* reorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reorder.h; sourceTree = "<group>"; };
+		E0794231170517A5002729C7 /* reteutil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = reteutil.c; sourceTree = "<group>"; };
+		E0794232170517A5002729C7 /* reteutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reteutil.h; sourceTree = "<group>"; };
+		E0794233170517A5002729C7 /* retract.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = retract.c; sourceTree = "<group>"; };
+		E0794234170517A5002729C7 /* retract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = retract.h; sourceTree = "<group>"; };
+		E0794235170517A5002729C7 /* router.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = router.c; sourceTree = "<group>"; };
+		E0794236170517A5002729C7 /* router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = router.h; sourceTree = "<group>"; };
+		E0794237170517A5002729C7 /* rulebin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rulebin.c; sourceTree = "<group>"; };
+		E0794238170517A5002729C7 /* rulebin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rulebin.h; sourceTree = "<group>"; };
+		E0794239170517A5002729C7 /* rulebld.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rulebld.c; sourceTree = "<group>"; };
+		E079423A170517A5002729C7 /* rulebld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rulebld.h; sourceTree = "<group>"; };
+		E079423B170517A5002729C7 /* rulebsc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rulebsc.c; sourceTree = "<group>"; };
+		E079423C170517A5002729C7 /* rulebsc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rulebsc.h; sourceTree = "<group>"; };
+		E079423D170517A5002729C7 /* rulecmp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rulecmp.c; sourceTree = "<group>"; };
+		E079423E170517A5002729C7 /* rulecmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rulecmp.h; sourceTree = "<group>"; };
+		E079423F170517A5002729C7 /* rulecom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rulecom.c; sourceTree = "<group>"; };
+		E0794240170517A5002729C7 /* rulecom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rulecom.h; sourceTree = "<group>"; };
+		E0794241170517A5002729C7 /* rulecstr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rulecstr.c; sourceTree = "<group>"; };
+		E0794242170517A5002729C7 /* rulecstr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rulecstr.h; sourceTree = "<group>"; };
+		E0794243170517A5002729C7 /* ruledef.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ruledef.c; sourceTree = "<group>"; };
+		E0794244170517A5002729C7 /* ruledef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ruledef.h; sourceTree = "<group>"; };
+		E0794245170517A5002729C7 /* ruledlt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ruledlt.c; sourceTree = "<group>"; };
+		E0794246170517A5002729C7 /* ruledlt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ruledlt.h; sourceTree = "<group>"; };
+		E0794247170517A5002729C7 /* rulelhs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rulelhs.c; sourceTree = "<group>"; };
+		E0794248170517A5002729C7 /* rulelhs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rulelhs.h; sourceTree = "<group>"; };
+		E0794249170517A5002729C7 /* rulepsr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rulepsr.c; sourceTree = "<group>"; };
+		E079424A170517A5002729C7 /* rulepsr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rulepsr.h; sourceTree = "<group>"; };
+		E079424B170517A5002729C7 /* scanner.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = scanner.c; sourceTree = "<group>"; };
+		E079424C170517A5002729C7 /* scanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scanner.h; sourceTree = "<group>"; };
+		E079424D170517A5002729C7 /* setup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = setup.h; sourceTree = "<group>"; };
+		E079424E170517A5002729C7 /* shrtlnkn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shrtlnkn.h; sourceTree = "<group>"; };
+		E079424F170517A5002729C7 /* sortfun.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sortfun.c; sourceTree = "<group>"; };
+		E0794250170517A5002729C7 /* sortfun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sortfun.h; sourceTree = "<group>"; };
+		E0794251170517A5002729C7 /* strngfun.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = strngfun.c; sourceTree = "<group>"; };
+		E0794252170517A5002729C7 /* strngfun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strngfun.h; sourceTree = "<group>"; };
+		E0794253170517A5002729C7 /* strngrtr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = strngrtr.c; sourceTree = "<group>"; };
+		E0794254170517A5002729C7 /* strngrtr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strngrtr.h; sourceTree = "<group>"; };
+		E0794255170517A5002729C7 /* symblbin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = symblbin.c; sourceTree = "<group>"; };
+		E0794256170517A5002729C7 /* symblbin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = symblbin.h; sourceTree = "<group>"; };
+		E0794257170517A5002729C7 /* symblcmp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = symblcmp.c; sourceTree = "<group>"; };
+		E0794258170517A5002729C7 /* symblcmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = symblcmp.h; sourceTree = "<group>"; };
+		E0794259170517A5002729C7 /* symbol.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = symbol.c; sourceTree = "<group>"; };
+		E079425A170517A5002729C7 /* symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = symbol.h; sourceTree = "<group>"; };
+		E079425B170517A5002729C7 /* sysdep.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sysdep.c; sourceTree = "<group>"; };
+		E079425C170517A5002729C7 /* sysdep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sysdep.h; sourceTree = "<group>"; };
+		E079425D170517A5002729C7 /* textpro.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = textpro.c; sourceTree = "<group>"; };
+		E079425E170517A5002729C7 /* textpro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = textpro.h; sourceTree = "<group>"; };
+		E079425F170517A5002729C7 /* tmpltbin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tmpltbin.c; sourceTree = "<group>"; };
+		E0794260170517A5002729C7 /* tmpltbin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tmpltbin.h; sourceTree = "<group>"; };
+		E0794261170517A5002729C7 /* tmpltbsc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tmpltbsc.c; sourceTree = "<group>"; };
+		E0794262170517A5002729C7 /* tmpltbsc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tmpltbsc.h; sourceTree = "<group>"; };
+		E0794263170517A5002729C7 /* tmpltcmp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tmpltcmp.c; sourceTree = "<group>"; };
+		E0794264170517A5002729C7 /* tmpltcmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tmpltcmp.h; sourceTree = "<group>"; };
+		E0794265170517A5002729C7 /* tmpltdef.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tmpltdef.c; sourceTree = "<group>"; };
+		E0794266170517A5002729C7 /* tmpltdef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tmpltdef.h; sourceTree = "<group>"; };
+		E0794267170517A5002729C7 /* tmpltfun.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tmpltfun.c; sourceTree = "<group>"; };
+		E0794268170517A5002729C7 /* tmpltfun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tmpltfun.h; sourceTree = "<group>"; };
+		E0794269170517A5002729C7 /* tmpltlhs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tmpltlhs.c; sourceTree = "<group>"; };
+		E079426A170517A5002729C7 /* tmpltlhs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tmpltlhs.h; sourceTree = "<group>"; };
+		E079426B170517A5002729C7 /* tmpltpsr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tmpltpsr.c; sourceTree = "<group>"; };
+		E079426C170517A5002729C7 /* tmpltpsr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tmpltpsr.h; sourceTree = "<group>"; };
+		E079426D170517A5002729C7 /* tmpltrhs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tmpltrhs.c; sourceTree = "<group>"; };
+		E079426E170517A5002729C7 /* tmpltrhs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tmpltrhs.h; sourceTree = "<group>"; };
+		E079426F170517A5002729C7 /* tmpltutl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tmpltutl.c; sourceTree = "<group>"; };
+		E0794270170517A5002729C7 /* tmpltutl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tmpltutl.h; sourceTree = "<group>"; };
+		E0794271170517A5002729C7 /* userdata.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = userdata.c; sourceTree = "<group>"; };
+		E0794272170517A5002729C7 /* userdata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userdata.h; sourceTree = "<group>"; };
+		E0794273170517A5002729C7 /* userfunctions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = userfunctions.c; sourceTree = "<group>"; };
+		E0794274170517A5002729C7 /* usrsetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = usrsetup.h; sourceTree = "<group>"; };
+		E0794275170517A5002729C7 /* utility.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = utility.c; sourceTree = "<group>"; };
+		E0794276170517A5002729C7 /* utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utility.h; sourceTree = "<group>"; };
+		E0794277170517A5002729C7 /* watch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = watch.c; sourceTree = "<group>"; };
+		E0794278170517A5002729C7 /* watch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = watch.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +795,350 @@
 		E0793968170500A4002729C7 /* CLIPS */ = {
 			isa = PBXGroup;
 			children = (
-				E079396F170500A4002729C7 /* CLIPS.h */,
-				E0793970170500A4002729C7 /* CLIPS.m */,
+				E0794121170517A5002729C7 /* agenda.c */,
+				E0794122170517A5002729C7 /* agenda.h */,
+				E0794123170517A5002729C7 /* analysis.c */,
+				E0794124170517A5002729C7 /* analysis.h */,
+				E0794125170517A5002729C7 /* argacces.c */,
+				E0794126170517A5002729C7 /* argacces.h */,
+				E0794127170517A5002729C7 /* bload.c */,
+				E0794128170517A5002729C7 /* bload.h */,
+				E0794129170517A5002729C7 /* bmathfun.c */,
+				E079412A170517A5002729C7 /* bmathfun.h */,
+				E079412B170517A5002729C7 /* bsave.c */,
+				E079412C170517A5002729C7 /* bsave.h */,
+				E079412D170517A5002729C7 /* classcom.c */,
+				E079412E170517A5002729C7 /* classcom.h */,
+				E079412F170517A5002729C7 /* classexm.c */,
+				E0794130170517A5002729C7 /* classexm.h */,
+				E0794131170517A5002729C7 /* classfun.c */,
+				E0794132170517A5002729C7 /* classfun.h */,
+				E0794133170517A5002729C7 /* classinf.c */,
+				E0794134170517A5002729C7 /* classinf.h */,
+				E0794135170517A5002729C7 /* classini.c */,
+				E0794136170517A5002729C7 /* classini.h */,
+				E0794137170517A5002729C7 /* classpsr.c */,
+				E0794138170517A5002729C7 /* classpsr.h */,
+				E0794139170517A5002729C7 /* clips.h */,
+				E079413A170517A5002729C7 /* CLIPSEnvironment.h */,
+				E079413B170517A5002729C7 /* CLIPSEnvironment.m */,
+				E079413C170517A5002729C7 /* clsltpsr.c */,
+				E079413D170517A5002729C7 /* clsltpsr.h */,
+				E079413E170517A5002729C7 /* cmptblty.h */,
+				E079413F170517A5002729C7 /* commline.c */,
+				E0794140170517A5002729C7 /* commline.h */,
+				E0794141170517A5002729C7 /* conscomp.c */,
+				E0794142170517A5002729C7 /* conscomp.h */,
+				E0794143170517A5002729C7 /* constant.h */,
+				E0794144170517A5002729C7 /* constrct.c */,
+				E0794145170517A5002729C7 /* constrct.h */,
+				E0794146170517A5002729C7 /* constrnt.c */,
+				E0794147170517A5002729C7 /* constrnt.h */,
+				E0794148170517A5002729C7 /* crstrtgy.c */,
+				E0794149170517A5002729C7 /* crstrtgy.h */,
+				E079414A170517A5002729C7 /* cstrcbin.c */,
+				E079414B170517A5002729C7 /* cstrcbin.h */,
+				E079414C170517A5002729C7 /* cstrccmp.h */,
+				E079414D170517A5002729C7 /* cstrccom.c */,
+				E079414E170517A5002729C7 /* cstrccom.h */,
+				E079414F170517A5002729C7 /* cstrcpsr.c */,
+				E0794150170517A5002729C7 /* cstrcpsr.h */,
+				E0794151170517A5002729C7 /* cstrnbin.c */,
+				E0794152170517A5002729C7 /* cstrnbin.h */,
+				E0794153170517A5002729C7 /* cstrnchk.c */,
+				E0794154170517A5002729C7 /* cstrnchk.h */,
+				E0794155170517A5002729C7 /* cstrncmp.c */,
+				E0794156170517A5002729C7 /* cstrncmp.h */,
+				E0794157170517A5002729C7 /* cstrnops.c */,
+				E0794158170517A5002729C7 /* cstrnops.h */,
+				E0794159170517A5002729C7 /* cstrnpsr.c */,
+				E079415A170517A5002729C7 /* cstrnpsr.h */,
+				E079415B170517A5002729C7 /* cstrnutl.c */,
+				E079415C170517A5002729C7 /* cstrnutl.h */,
+				E079415D170517A5002729C7 /* default.c */,
+				E079415E170517A5002729C7 /* default.h */,
+				E079415F170517A5002729C7 /* defins.c */,
+				E0794160170517A5002729C7 /* defins.h */,
+				E0794161170517A5002729C7 /* developr.c */,
+				E0794162170517A5002729C7 /* developr.h */,
+				E0794163170517A5002729C7 /* dffctbin.c */,
+				E0794164170517A5002729C7 /* dffctbin.h */,
+				E0794165170517A5002729C7 /* dffctbsc.c */,
+				E0794166170517A5002729C7 /* dffctbsc.h */,
+				E0794167170517A5002729C7 /* dffctcmp.c */,
+				E0794168170517A5002729C7 /* dffctcmp.h */,
+				E0794169170517A5002729C7 /* dffctdef.c */,
+				E079416A170517A5002729C7 /* dffctdef.h */,
+				E079416B170517A5002729C7 /* dffctpsr.c */,
+				E079416C170517A5002729C7 /* dffctpsr.h */,
+				E079416D170517A5002729C7 /* dffnxbin.c */,
+				E079416E170517A5002729C7 /* dffnxbin.h */,
+				E079416F170517A5002729C7 /* dffnxcmp.c */,
+				E0794170170517A5002729C7 /* dffnxcmp.h */,
+				E0794171170517A5002729C7 /* dffnxexe.c */,
+				E0794172170517A5002729C7 /* dffnxexe.h */,
+				E0794173170517A5002729C7 /* dffnxfun.c */,
+				E0794174170517A5002729C7 /* dffnxfun.h */,
+				E0794175170517A5002729C7 /* dffnxpsr.c */,
+				E0794176170517A5002729C7 /* dffnxpsr.h */,
+				E0794177170517A5002729C7 /* dfinsbin.c */,
+				E0794178170517A5002729C7 /* dfinsbin.h */,
+				E0794179170517A5002729C7 /* dfinscmp.c */,
+				E079417A170517A5002729C7 /* dfinscmp.h */,
+				E079417B170517A5002729C7 /* drive.c */,
+				E079417C170517A5002729C7 /* drive.h */,
+				E079417D170517A5002729C7 /* ed.h */,
+				E079417E170517A5002729C7 /* edbasic.c */,
+				E079417F170517A5002729C7 /* edmain.c */,
+				E0794180170517A5002729C7 /* edmisc.c */,
+				E0794181170517A5002729C7 /* edstruct.c */,
+				E0794182170517A5002729C7 /* edterm.c */,
+				E0794183170517A5002729C7 /* emathfun.c */,
+				E0794184170517A5002729C7 /* emathfun.h */,
+				E0794185170517A5002729C7 /* engine.c */,
+				E0794186170517A5002729C7 /* engine.h */,
+				E0794187170517A5002729C7 /* envrnmnt.c */,
+				E0794188170517A5002729C7 /* envrnmnt.h */,
+				E0794189170517A5002729C7 /* evaluatn.c */,
+				E079418A170517A5002729C7 /* evaluatn.h */,
+				E079418B170517A5002729C7 /* expressn.c */,
+				E079418C170517A5002729C7 /* expressn.h */,
+				E079418D170517A5002729C7 /* exprnbin.c */,
+				E079418E170517A5002729C7 /* exprnbin.h */,
+				E079418F170517A5002729C7 /* exprnops.c */,
+				E0794190170517A5002729C7 /* exprnops.h */,
+				E0794191170517A5002729C7 /* exprnpsr.c */,
+				E0794192170517A5002729C7 /* exprnpsr.h */,
+				E0794193170517A5002729C7 /* extnfunc.c */,
+				E0794194170517A5002729C7 /* extnfunc.h */,
+				E0794195170517A5002729C7 /* factbin.c */,
+				E0794196170517A5002729C7 /* factbin.h */,
+				E0794197170517A5002729C7 /* factbld.c */,
+				E0794198170517A5002729C7 /* factbld.h */,
+				E0794199170517A5002729C7 /* factcmp.c */,
+				E079419A170517A5002729C7 /* factcmp.h */,
+				E079419B170517A5002729C7 /* factcom.c */,
+				E079419C170517A5002729C7 /* factcom.h */,
+				E079419D170517A5002729C7 /* factfun.c */,
+				E079419E170517A5002729C7 /* factfun.h */,
+				E079419F170517A5002729C7 /* factgen.c */,
+				E07941A0170517A5002729C7 /* factgen.h */,
+				E07941A1170517A5002729C7 /* facthsh.c */,
+				E07941A2170517A5002729C7 /* facthsh.h */,
+				E07941A3170517A5002729C7 /* factlhs.c */,
+				E07941A4170517A5002729C7 /* factlhs.h */,
+				E07941A5170517A5002729C7 /* factmch.c */,
+				E07941A6170517A5002729C7 /* factmch.h */,
+				E07941A7170517A5002729C7 /* factmngr.c */,
+				E07941A8170517A5002729C7 /* factmngr.h */,
+				E07941A9170517A5002729C7 /* factprt.c */,
+				E07941AA170517A5002729C7 /* factprt.h */,
+				E07941AB170517A5002729C7 /* factqpsr.c */,
+				E07941AC170517A5002729C7 /* factqpsr.h */,
+				E07941AD170517A5002729C7 /* factqury.c */,
+				E07941AE170517A5002729C7 /* factqury.h */,
+				E07941AF170517A5002729C7 /* factrete.c */,
+				E07941B0170517A5002729C7 /* factrete.h */,
+				E07941B1170517A5002729C7 /* factrhs.c */,
+				E07941B2170517A5002729C7 /* factrhs.h */,
+				E07941B3170517A5002729C7 /* filecom.c */,
+				E07941B4170517A5002729C7 /* filecom.h */,
+				E07941B5170517A5002729C7 /* filertr.c */,
+				E07941B6170517A5002729C7 /* filertr.h */,
+				E07941B7170517A5002729C7 /* generate.c */,
+				E07941B8170517A5002729C7 /* generate.h */,
+				E07941B9170517A5002729C7 /* genrcbin.c */,
+				E07941BA170517A5002729C7 /* genrcbin.h */,
+				E07941BB170517A5002729C7 /* genrccmp.c */,
+				E07941BC170517A5002729C7 /* genrccmp.h */,
+				E07941BD170517A5002729C7 /* genrccom.c */,
+				E07941BE170517A5002729C7 /* genrccom.h */,
+				E07941BF170517A5002729C7 /* genrcexe.c */,
+				E07941C0170517A5002729C7 /* genrcexe.h */,
+				E07941C1170517A5002729C7 /* genrcfun.c */,
+				E07941C2170517A5002729C7 /* genrcfun.h */,
+				E07941C3170517A5002729C7 /* genrcpsr.c */,
+				E07941C4170517A5002729C7 /* genrcpsr.h */,
+				E07941C5170517A5002729C7 /* globlbin.c */,
+				E07941C6170517A5002729C7 /* globlbin.h */,
+				E07941C7170517A5002729C7 /* globlbsc.c */,
+				E07941C8170517A5002729C7 /* globlbsc.h */,
+				E07941C9170517A5002729C7 /* globlcmp.c */,
+				E07941CA170517A5002729C7 /* globlcmp.h */,
+				E07941CB170517A5002729C7 /* globlcom.c */,
+				E07941CC170517A5002729C7 /* globlcom.h */,
+				E07941CD170517A5002729C7 /* globldef.c */,
+				E07941CE170517A5002729C7 /* globldef.h */,
+				E07941CF170517A5002729C7 /* globlpsr.c */,
+				E07941D0170517A5002729C7 /* globlpsr.h */,
+				E07941D1170517A5002729C7 /* immthpsr.c */,
+				E07941D2170517A5002729C7 /* immthpsr.h */,
+				E07941D3170517A5002729C7 /* incrrset.c */,
+				E07941D4170517A5002729C7 /* incrrset.h */,
+				E07941D5170517A5002729C7 /* inherpsr.c */,
+				E07941D6170517A5002729C7 /* inherpsr.h */,
+				E07941D7170517A5002729C7 /* inscom.c */,
+				E07941D8170517A5002729C7 /* inscom.h */,
+				E07941D9170517A5002729C7 /* insfile.c */,
+				E07941DA170517A5002729C7 /* insfile.h */,
+				E07941DB170517A5002729C7 /* insfun.c */,
+				E07941DC170517A5002729C7 /* insfun.h */,
+				E07941DD170517A5002729C7 /* insmngr.c */,
+				E07941DE170517A5002729C7 /* insmngr.h */,
+				E07941DF170517A5002729C7 /* insmoddp.c */,
+				E07941E0170517A5002729C7 /* insmoddp.h */,
+				E07941E1170517A5002729C7 /* insmult.c */,
+				E07941E2170517A5002729C7 /* insmult.h */,
+				E07941E3170517A5002729C7 /* inspsr.c */,
+				E07941E4170517A5002729C7 /* inspsr.h */,
+				E07941E5170517A5002729C7 /* insquery.c */,
+				E07941E6170517A5002729C7 /* insquery.h */,
+				E07941E7170517A5002729C7 /* insqypsr.c */,
+				E07941E8170517A5002729C7 /* insqypsr.h */,
+				E07941E9170517A5002729C7 /* iofun.c */,
+				E07941EA170517A5002729C7 /* iofun.h */,
+				E07941EB170517A5002729C7 /* lgcldpnd.c */,
+				E07941EC170517A5002729C7 /* lgcldpnd.h */,
+				E07941ED170517A5002729C7 /* main.c */,
+				E07941EE170517A5002729C7 /* match.h */,
+				E07941EF170517A5002729C7 /* memalloc.c */,
+				E07941F0170517A5002729C7 /* memalloc.h */,
+				E07941F1170517A5002729C7 /* miscfun.c */,
+				E07941F2170517A5002729C7 /* miscfun.h */,
+				E07941F3170517A5002729C7 /* modulbin.c */,
+				E07941F4170517A5002729C7 /* modulbin.h */,
+				E07941F5170517A5002729C7 /* modulbsc.c */,
+				E07941F6170517A5002729C7 /* modulbsc.h */,
+				E07941F7170517A5002729C7 /* modulcmp.c */,
+				E07941F8170517A5002729C7 /* modulcmp.h */,
+				E07941F9170517A5002729C7 /* moduldef.c */,
+				E07941FA170517A5002729C7 /* moduldef.h */,
+				E07941FB170517A5002729C7 /* modulpsr.c */,
+				E07941FC170517A5002729C7 /* modulpsr.h */,
+				E07941FD170517A5002729C7 /* modulutl.c */,
+				E07941FE170517A5002729C7 /* modulutl.h */,
+				E07941FF170517A5002729C7 /* msgcom.c */,
+				E0794200170517A5002729C7 /* msgcom.h */,
+				E0794201170517A5002729C7 /* msgfun.c */,
+				E0794202170517A5002729C7 /* msgfun.h */,
+				E0794203170517A5002729C7 /* msgpass.c */,
+				E0794204170517A5002729C7 /* msgpass.h */,
+				E0794205170517A5002729C7 /* msgpsr.c */,
+				E0794206170517A5002729C7 /* msgpsr.h */,
+				E0794207170517A5002729C7 /* multifld.c */,
+				E0794208170517A5002729C7 /* multifld.h */,
+				E0794209170517A5002729C7 /* multifun.c */,
+				E079420A170517A5002729C7 /* multifun.h */,
+				E079420B170517A5002729C7 /* network.h */,
+				E079420C170517A5002729C7 /* objbin.c */,
+				E079420D170517A5002729C7 /* objbin.h */,
+				E079420E170517A5002729C7 /* objcmp.c */,
+				E079420F170517A5002729C7 /* objcmp.h */,
+				E0794210170517A5002729C7 /* object.h */,
+				E0794211170517A5002729C7 /* objrtbin.c */,
+				E0794212170517A5002729C7 /* objrtbin.h */,
+				E0794213170517A5002729C7 /* objrtbld.c */,
+				E0794214170517A5002729C7 /* objrtbld.h */,
+				E0794215170517A5002729C7 /* objrtcmp.c */,
+				E0794216170517A5002729C7 /* objrtcmp.h */,
+				E0794217170517A5002729C7 /* objrtfnx.c */,
+				E0794218170517A5002729C7 /* objrtfnx.h */,
+				E0794219170517A5002729C7 /* objrtgen.c */,
+				E079421A170517A5002729C7 /* objrtgen.h */,
+				E079421B170517A5002729C7 /* objrtmch.c */,
+				E079421C170517A5002729C7 /* objrtmch.h */,
+				E079421D170517A5002729C7 /* parsefun.c */,
+				E079421E170517A5002729C7 /* parsefun.h */,
+				E079421F170517A5002729C7 /* pattern.c */,
+				E0794220170517A5002729C7 /* pattern.h */,
+				E0794221170517A5002729C7 /* pprint.c */,
+				E0794222170517A5002729C7 /* pprint.h */,
+				E0794223170517A5002729C7 /* prccode.c */,
+				E0794224170517A5002729C7 /* prccode.h */,
+				E0794225170517A5002729C7 /* prcdrfun.c */,
+				E0794226170517A5002729C7 /* prcdrfun.h */,
+				E0794227170517A5002729C7 /* prcdrpsr.c */,
+				E0794228170517A5002729C7 /* prcdrpsr.h */,
+				E0794229170517A5002729C7 /* prdctfun.c */,
+				E079422A170517A5002729C7 /* prdctfun.h */,
+				E079422B170517A5002729C7 /* prntutil.c */,
+				E079422C170517A5002729C7 /* prntutil.h */,
+				E079422D170517A5002729C7 /* proflfun.c */,
+				E079422E170517A5002729C7 /* proflfun.h */,
+				E079422F170517A5002729C7 /* reorder.c */,
+				E0794230170517A5002729C7 /* reorder.h */,
+				E0794231170517A5002729C7 /* reteutil.c */,
+				E0794232170517A5002729C7 /* reteutil.h */,
+				E0794233170517A5002729C7 /* retract.c */,
+				E0794234170517A5002729C7 /* retract.h */,
+				E0794235170517A5002729C7 /* router.c */,
+				E0794236170517A5002729C7 /* router.h */,
+				E0794237170517A5002729C7 /* rulebin.c */,
+				E0794238170517A5002729C7 /* rulebin.h */,
+				E0794239170517A5002729C7 /* rulebld.c */,
+				E079423A170517A5002729C7 /* rulebld.h */,
+				E079423B170517A5002729C7 /* rulebsc.c */,
+				E079423C170517A5002729C7 /* rulebsc.h */,
+				E079423D170517A5002729C7 /* rulecmp.c */,
+				E079423E170517A5002729C7 /* rulecmp.h */,
+				E079423F170517A5002729C7 /* rulecom.c */,
+				E0794240170517A5002729C7 /* rulecom.h */,
+				E0794241170517A5002729C7 /* rulecstr.c */,
+				E0794242170517A5002729C7 /* rulecstr.h */,
+				E0794243170517A5002729C7 /* ruledef.c */,
+				E0794244170517A5002729C7 /* ruledef.h */,
+				E0794245170517A5002729C7 /* ruledlt.c */,
+				E0794246170517A5002729C7 /* ruledlt.h */,
+				E0794247170517A5002729C7 /* rulelhs.c */,
+				E0794248170517A5002729C7 /* rulelhs.h */,
+				E0794249170517A5002729C7 /* rulepsr.c */,
+				E079424A170517A5002729C7 /* rulepsr.h */,
+				E079424B170517A5002729C7 /* scanner.c */,
+				E079424C170517A5002729C7 /* scanner.h */,
+				E079424D170517A5002729C7 /* setup.h */,
+				E079424E170517A5002729C7 /* shrtlnkn.h */,
+				E079424F170517A5002729C7 /* sortfun.c */,
+				E0794250170517A5002729C7 /* sortfun.h */,
+				E0794251170517A5002729C7 /* strngfun.c */,
+				E0794252170517A5002729C7 /* strngfun.h */,
+				E0794253170517A5002729C7 /* strngrtr.c */,
+				E0794254170517A5002729C7 /* strngrtr.h */,
+				E0794255170517A5002729C7 /* symblbin.c */,
+				E0794256170517A5002729C7 /* symblbin.h */,
+				E0794257170517A5002729C7 /* symblcmp.c */,
+				E0794258170517A5002729C7 /* symblcmp.h */,
+				E0794259170517A5002729C7 /* symbol.c */,
+				E079425A170517A5002729C7 /* symbol.h */,
+				E079425B170517A5002729C7 /* sysdep.c */,
+				E079425C170517A5002729C7 /* sysdep.h */,
+				E079425D170517A5002729C7 /* textpro.c */,
+				E079425E170517A5002729C7 /* textpro.h */,
+				E079425F170517A5002729C7 /* tmpltbin.c */,
+				E0794260170517A5002729C7 /* tmpltbin.h */,
+				E0794261170517A5002729C7 /* tmpltbsc.c */,
+				E0794262170517A5002729C7 /* tmpltbsc.h */,
+				E0794263170517A5002729C7 /* tmpltcmp.c */,
+				E0794264170517A5002729C7 /* tmpltcmp.h */,
+				E0794265170517A5002729C7 /* tmpltdef.c */,
+				E0794266170517A5002729C7 /* tmpltdef.h */,
+				E0794267170517A5002729C7 /* tmpltfun.c */,
+				E0794268170517A5002729C7 /* tmpltfun.h */,
+				E0794269170517A5002729C7 /* tmpltlhs.c */,
+				E079426A170517A5002729C7 /* tmpltlhs.h */,
+				E079426B170517A5002729C7 /* tmpltpsr.c */,
+				E079426C170517A5002729C7 /* tmpltpsr.h */,
+				E079426D170517A5002729C7 /* tmpltrhs.c */,
+				E079426E170517A5002729C7 /* tmpltrhs.h */,
+				E079426F170517A5002729C7 /* tmpltutl.c */,
+				E0794270170517A5002729C7 /* tmpltutl.h */,
+				E0794271170517A5002729C7 /* userdata.c */,
+				E0794272170517A5002729C7 /* userdata.h */,
+				E0794273170517A5002729C7 /* userfunctions.c */,
+				E0794274170517A5002729C7 /* usrsetup.h */,
+				E0794275170517A5002729C7 /* utility.c */,
+				E0794276170517A5002729C7 /* utility.h */,
+				E0794277170517A5002729C7 /* watch.c */,
+				E0794278170517A5002729C7 /* watch.h */,
 				E0793969170500A4002729C7 /* Supporting Files */,
 			);
 			path = CLIPS;
@@ -153,6 +1180,180 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E079427A170517A6002729C7 /* agenda.h in Headers */,
+				E079427C170517A6002729C7 /* analysis.h in Headers */,
+				E079427E170517A6002729C7 /* argacces.h in Headers */,
+				E0794280170517A6002729C7 /* bload.h in Headers */,
+				E0794282170517A6002729C7 /* bmathfun.h in Headers */,
+				E0794284170517A6002729C7 /* bsave.h in Headers */,
+				E0794286170517A6002729C7 /* classcom.h in Headers */,
+				E0794288170517A6002729C7 /* classexm.h in Headers */,
+				E079428A170517A6002729C7 /* classfun.h in Headers */,
+				E079428C170517A6002729C7 /* classinf.h in Headers */,
+				E079428E170517A6002729C7 /* classini.h in Headers */,
+				E0794290170517A6002729C7 /* classpsr.h in Headers */,
+				E0794291170517A6002729C7 /* clips.h in Headers */,
+				E0794292170517A6002729C7 /* CLIPSEnvironment.h in Headers */,
+				E0794295170517A6002729C7 /* clsltpsr.h in Headers */,
+				E0794296170517A6002729C7 /* cmptblty.h in Headers */,
+				E0794298170517A6002729C7 /* commline.h in Headers */,
+				E079429A170517A6002729C7 /* conscomp.h in Headers */,
+				E079429B170517A6002729C7 /* constant.h in Headers */,
+				E079429D170517A6002729C7 /* constrct.h in Headers */,
+				E079429F170517A6002729C7 /* constrnt.h in Headers */,
+				E07942A1170517A6002729C7 /* crstrtgy.h in Headers */,
+				E07942A3170517A6002729C7 /* cstrcbin.h in Headers */,
+				E07942A4170517A6002729C7 /* cstrccmp.h in Headers */,
+				E07942A6170517A6002729C7 /* cstrccom.h in Headers */,
+				E07942A8170517A6002729C7 /* cstrcpsr.h in Headers */,
+				E07942AA170517A6002729C7 /* cstrnbin.h in Headers */,
+				E07942AC170517A6002729C7 /* cstrnchk.h in Headers */,
+				E07942AE170517A6002729C7 /* cstrncmp.h in Headers */,
+				E07942B0170517A6002729C7 /* cstrnops.h in Headers */,
+				E07942B2170517A6002729C7 /* cstrnpsr.h in Headers */,
+				E07942B4170517A6002729C7 /* cstrnutl.h in Headers */,
+				E07942B6170517A6002729C7 /* default.h in Headers */,
+				E07942B8170517A6002729C7 /* defins.h in Headers */,
+				E07942BA170517A6002729C7 /* developr.h in Headers */,
+				E07942BC170517A6002729C7 /* dffctbin.h in Headers */,
+				E07942BE170517A6002729C7 /* dffctbsc.h in Headers */,
+				E07942C0170517A6002729C7 /* dffctcmp.h in Headers */,
+				E07942C2170517A6002729C7 /* dffctdef.h in Headers */,
+				E07942C4170517A6002729C7 /* dffctpsr.h in Headers */,
+				E07942C6170517A6002729C7 /* dffnxbin.h in Headers */,
+				E07942C8170517A6002729C7 /* dffnxcmp.h in Headers */,
+				E07942CA170517A6002729C7 /* dffnxexe.h in Headers */,
+				E07942CC170517A6002729C7 /* dffnxfun.h in Headers */,
+				E07942CE170517A6002729C7 /* dffnxpsr.h in Headers */,
+				E07942D0170517A6002729C7 /* dfinsbin.h in Headers */,
+				E07942D2170517A6002729C7 /* dfinscmp.h in Headers */,
+				E07942D4170517A6002729C7 /* drive.h in Headers */,
+				E07942D5170517A6002729C7 /* ed.h in Headers */,
+				E07942DC170517A6002729C7 /* emathfun.h in Headers */,
+				E07942DE170517A6002729C7 /* engine.h in Headers */,
+				E07942E0170517A6002729C7 /* envrnmnt.h in Headers */,
+				E07942E2170517A6002729C7 /* evaluatn.h in Headers */,
+				E07942E4170517A6002729C7 /* expressn.h in Headers */,
+				E07942E6170517A6002729C7 /* exprnbin.h in Headers */,
+				E07942E8170517A6002729C7 /* exprnops.h in Headers */,
+				E07942EA170517A6002729C7 /* exprnpsr.h in Headers */,
+				E07942EC170517A6002729C7 /* extnfunc.h in Headers */,
+				E07942EE170517A6002729C7 /* factbin.h in Headers */,
+				E07942F0170517A6002729C7 /* factbld.h in Headers */,
+				E07942F2170517A6002729C7 /* factcmp.h in Headers */,
+				E07942F4170517A6002729C7 /* factcom.h in Headers */,
+				E07942F6170517A6002729C7 /* factfun.h in Headers */,
+				E07942F8170517A6002729C7 /* factgen.h in Headers */,
+				E07942FA170517A6002729C7 /* facthsh.h in Headers */,
+				E07942FC170517A6002729C7 /* factlhs.h in Headers */,
+				E07942FE170517A6002729C7 /* factmch.h in Headers */,
+				E0794300170517A6002729C7 /* factmngr.h in Headers */,
+				E0794302170517A6002729C7 /* factprt.h in Headers */,
+				E0794304170517A6002729C7 /* factqpsr.h in Headers */,
+				E0794306170517A6002729C7 /* factqury.h in Headers */,
+				E0794308170517A6002729C7 /* factrete.h in Headers */,
+				E079430A170517A6002729C7 /* factrhs.h in Headers */,
+				E079430C170517A6002729C7 /* filecom.h in Headers */,
+				E079430E170517A6002729C7 /* filertr.h in Headers */,
+				E0794310170517A6002729C7 /* generate.h in Headers */,
+				E0794312170517A6002729C7 /* genrcbin.h in Headers */,
+				E0794314170517A6002729C7 /* genrccmp.h in Headers */,
+				E0794316170517A6002729C7 /* genrccom.h in Headers */,
+				E0794318170517A6002729C7 /* genrcexe.h in Headers */,
+				E079431A170517A6002729C7 /* genrcfun.h in Headers */,
+				E079431C170517A6002729C7 /* genrcpsr.h in Headers */,
+				E079431E170517A6002729C7 /* globlbin.h in Headers */,
+				E0794320170517A6002729C7 /* globlbsc.h in Headers */,
+				E0794322170517A6002729C7 /* globlcmp.h in Headers */,
+				E0794324170517A6002729C7 /* globlcom.h in Headers */,
+				E0794326170517A6002729C7 /* globldef.h in Headers */,
+				E0794328170517A6002729C7 /* globlpsr.h in Headers */,
+				E079432A170517A6002729C7 /* immthpsr.h in Headers */,
+				E079432C170517A6002729C7 /* incrrset.h in Headers */,
+				E079432E170517A6002729C7 /* inherpsr.h in Headers */,
+				E0794330170517A6002729C7 /* inscom.h in Headers */,
+				E0794332170517A6002729C7 /* insfile.h in Headers */,
+				E0794334170517A6002729C7 /* insfun.h in Headers */,
+				E0794336170517A6002729C7 /* insmngr.h in Headers */,
+				E0794338170517A6002729C7 /* insmoddp.h in Headers */,
+				E079433A170517A6002729C7 /* insmult.h in Headers */,
+				E079433C170517A6002729C7 /* inspsr.h in Headers */,
+				E079433E170517A6002729C7 /* insquery.h in Headers */,
+				E0794340170517A6002729C7 /* insqypsr.h in Headers */,
+				E0794342170517A6002729C7 /* iofun.h in Headers */,
+				E0794344170517A6002729C7 /* lgcldpnd.h in Headers */,
+				E0794346170517A6002729C7 /* match.h in Headers */,
+				E0794348170517A6002729C7 /* memalloc.h in Headers */,
+				E079434A170517A6002729C7 /* miscfun.h in Headers */,
+				E079434C170517A6002729C7 /* modulbin.h in Headers */,
+				E079434E170517A6002729C7 /* modulbsc.h in Headers */,
+				E0794350170517A6002729C7 /* modulcmp.h in Headers */,
+				E0794352170517A6002729C7 /* moduldef.h in Headers */,
+				E0794354170517A6002729C7 /* modulpsr.h in Headers */,
+				E0794356170517A6002729C7 /* modulutl.h in Headers */,
+				E0794358170517A6002729C7 /* msgcom.h in Headers */,
+				E079435A170517A6002729C7 /* msgfun.h in Headers */,
+				E079435C170517A6002729C7 /* msgpass.h in Headers */,
+				E079435E170517A6002729C7 /* msgpsr.h in Headers */,
+				E0794360170517A6002729C7 /* multifld.h in Headers */,
+				E0794362170517A6002729C7 /* multifun.h in Headers */,
+				E0794363170517A6002729C7 /* network.h in Headers */,
+				E0794365170517A6002729C7 /* objbin.h in Headers */,
+				E0794367170517A6002729C7 /* objcmp.h in Headers */,
+				E0794368170517A6002729C7 /* object.h in Headers */,
+				E079436A170517A6002729C7 /* objrtbin.h in Headers */,
+				E079436C170517A6002729C7 /* objrtbld.h in Headers */,
+				E079436E170517A6002729C7 /* objrtcmp.h in Headers */,
+				E0794370170517A6002729C7 /* objrtfnx.h in Headers */,
+				E0794372170517A6002729C7 /* objrtgen.h in Headers */,
+				E0794374170517A6002729C7 /* objrtmch.h in Headers */,
+				E0794376170517A6002729C7 /* parsefun.h in Headers */,
+				E0794378170517A6002729C7 /* pattern.h in Headers */,
+				E079437A170517A6002729C7 /* pprint.h in Headers */,
+				E079437C170517A6002729C7 /* prccode.h in Headers */,
+				E079437E170517A6002729C7 /* prcdrfun.h in Headers */,
+				E0794380170517A6002729C7 /* prcdrpsr.h in Headers */,
+				E0794382170517A6002729C7 /* prdctfun.h in Headers */,
+				E0794384170517A6002729C7 /* prntutil.h in Headers */,
+				E0794386170517A6002729C7 /* proflfun.h in Headers */,
+				E0794388170517A6002729C7 /* reorder.h in Headers */,
+				E079438A170517A6002729C7 /* reteutil.h in Headers */,
+				E079438C170517A6002729C7 /* retract.h in Headers */,
+				E079438E170517A6002729C7 /* router.h in Headers */,
+				E0794390170517A6002729C7 /* rulebin.h in Headers */,
+				E0794392170517A6002729C7 /* rulebld.h in Headers */,
+				E0794394170517A6002729C7 /* rulebsc.h in Headers */,
+				E0794396170517A6002729C7 /* rulecmp.h in Headers */,
+				E0794398170517A6002729C7 /* rulecom.h in Headers */,
+				E079439A170517A6002729C7 /* rulecstr.h in Headers */,
+				E079439C170517A6002729C7 /* ruledef.h in Headers */,
+				E079439E170517A6002729C7 /* ruledlt.h in Headers */,
+				E07943A0170517A6002729C7 /* rulelhs.h in Headers */,
+				E07943A2170517A6002729C7 /* rulepsr.h in Headers */,
+				E07943A4170517A6002729C7 /* scanner.h in Headers */,
+				E07943A5170517A6002729C7 /* setup.h in Headers */,
+				E07943A6170517A6002729C7 /* shrtlnkn.h in Headers */,
+				E07943A8170517A6002729C7 /* sortfun.h in Headers */,
+				E07943AA170517A6002729C7 /* strngfun.h in Headers */,
+				E07943AC170517A6002729C7 /* strngrtr.h in Headers */,
+				E07943AE170517A6002729C7 /* symblbin.h in Headers */,
+				E07943B0170517A6002729C7 /* symblcmp.h in Headers */,
+				E07943B2170517A6002729C7 /* symbol.h in Headers */,
+				E07943B4170517A6002729C7 /* sysdep.h in Headers */,
+				E07943B6170517A6002729C7 /* textpro.h in Headers */,
+				E07943B8170517A6002729C7 /* tmpltbin.h in Headers */,
+				E07943BA170517A6002729C7 /* tmpltbsc.h in Headers */,
+				E07943BC170517A6002729C7 /* tmpltcmp.h in Headers */,
+				E07943BE170517A6002729C7 /* tmpltdef.h in Headers */,
+				E07943C0170517A6002729C7 /* tmpltfun.h in Headers */,
+				E07943C2170517A6002729C7 /* tmpltlhs.h in Headers */,
+				E07943C4170517A6002729C7 /* tmpltpsr.h in Headers */,
+				E07943C6170517A6002729C7 /* tmpltrhs.h in Headers */,
+				E07943C8170517A6002729C7 /* tmpltutl.h in Headers */,
+				E07943CA170517A6002729C7 /* userdata.h in Headers */,
+				E07943CC170517A6002729C7 /* usrsetup.h in Headers */,
+				E07943CE170517A6002729C7 /* utility.h in Headers */,
+				E07943D0170517A6002729C7 /* watch.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +1464,176 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0793971170500A4002729C7 /* CLIPS.m in Sources */,
+				E0794279170517A6002729C7 /* agenda.c in Sources */,
+				E079427B170517A6002729C7 /* analysis.c in Sources */,
+				E079427D170517A6002729C7 /* argacces.c in Sources */,
+				E079427F170517A6002729C7 /* bload.c in Sources */,
+				E0794281170517A6002729C7 /* bmathfun.c in Sources */,
+				E0794283170517A6002729C7 /* bsave.c in Sources */,
+				E0794285170517A6002729C7 /* classcom.c in Sources */,
+				E0794287170517A6002729C7 /* classexm.c in Sources */,
+				E0794289170517A6002729C7 /* classfun.c in Sources */,
+				E079428B170517A6002729C7 /* classinf.c in Sources */,
+				E079428D170517A6002729C7 /* classini.c in Sources */,
+				E079428F170517A6002729C7 /* classpsr.c in Sources */,
+				E0794293170517A6002729C7 /* CLIPSEnvironment.m in Sources */,
+				E0794294170517A6002729C7 /* clsltpsr.c in Sources */,
+				E0794297170517A6002729C7 /* commline.c in Sources */,
+				E0794299170517A6002729C7 /* conscomp.c in Sources */,
+				E079429C170517A6002729C7 /* constrct.c in Sources */,
+				E079429E170517A6002729C7 /* constrnt.c in Sources */,
+				E07942A0170517A6002729C7 /* crstrtgy.c in Sources */,
+				E07942A2170517A6002729C7 /* cstrcbin.c in Sources */,
+				E07942A5170517A6002729C7 /* cstrccom.c in Sources */,
+				E07942A7170517A6002729C7 /* cstrcpsr.c in Sources */,
+				E07942A9170517A6002729C7 /* cstrnbin.c in Sources */,
+				E07942AB170517A6002729C7 /* cstrnchk.c in Sources */,
+				E07942AD170517A6002729C7 /* cstrncmp.c in Sources */,
+				E07942AF170517A6002729C7 /* cstrnops.c in Sources */,
+				E07942B1170517A6002729C7 /* cstrnpsr.c in Sources */,
+				E07942B3170517A6002729C7 /* cstrnutl.c in Sources */,
+				E07942B5170517A6002729C7 /* default.c in Sources */,
+				E07942B7170517A6002729C7 /* defins.c in Sources */,
+				E07942B9170517A6002729C7 /* developr.c in Sources */,
+				E07942BB170517A6002729C7 /* dffctbin.c in Sources */,
+				E07942BD170517A6002729C7 /* dffctbsc.c in Sources */,
+				E07942BF170517A6002729C7 /* dffctcmp.c in Sources */,
+				E07942C1170517A6002729C7 /* dffctdef.c in Sources */,
+				E07942C3170517A6002729C7 /* dffctpsr.c in Sources */,
+				E07942C5170517A6002729C7 /* dffnxbin.c in Sources */,
+				E07942C7170517A6002729C7 /* dffnxcmp.c in Sources */,
+				E07942C9170517A6002729C7 /* dffnxexe.c in Sources */,
+				E07942CB170517A6002729C7 /* dffnxfun.c in Sources */,
+				E07942CD170517A6002729C7 /* dffnxpsr.c in Sources */,
+				E07942CF170517A6002729C7 /* dfinsbin.c in Sources */,
+				E07942D1170517A6002729C7 /* dfinscmp.c in Sources */,
+				E07942D3170517A6002729C7 /* drive.c in Sources */,
+				E07942D6170517A6002729C7 /* edbasic.c in Sources */,
+				E07942D7170517A6002729C7 /* edmain.c in Sources */,
+				E07942D8170517A6002729C7 /* edmisc.c in Sources */,
+				E07942D9170517A6002729C7 /* edstruct.c in Sources */,
+				E07942DA170517A6002729C7 /* edterm.c in Sources */,
+				E07942DB170517A6002729C7 /* emathfun.c in Sources */,
+				E07942DD170517A6002729C7 /* engine.c in Sources */,
+				E07942DF170517A6002729C7 /* envrnmnt.c in Sources */,
+				E07942E1170517A6002729C7 /* evaluatn.c in Sources */,
+				E07942E3170517A6002729C7 /* expressn.c in Sources */,
+				E07942E5170517A6002729C7 /* exprnbin.c in Sources */,
+				E07942E7170517A6002729C7 /* exprnops.c in Sources */,
+				E07942E9170517A6002729C7 /* exprnpsr.c in Sources */,
+				E07942EB170517A6002729C7 /* extnfunc.c in Sources */,
+				E07942ED170517A6002729C7 /* factbin.c in Sources */,
+				E07942EF170517A6002729C7 /* factbld.c in Sources */,
+				E07942F1170517A6002729C7 /* factcmp.c in Sources */,
+				E07942F3170517A6002729C7 /* factcom.c in Sources */,
+				E07942F5170517A6002729C7 /* factfun.c in Sources */,
+				E07942F7170517A6002729C7 /* factgen.c in Sources */,
+				E07942F9170517A6002729C7 /* facthsh.c in Sources */,
+				E07942FB170517A6002729C7 /* factlhs.c in Sources */,
+				E07942FD170517A6002729C7 /* factmch.c in Sources */,
+				E07942FF170517A6002729C7 /* factmngr.c in Sources */,
+				E0794301170517A6002729C7 /* factprt.c in Sources */,
+				E0794303170517A6002729C7 /* factqpsr.c in Sources */,
+				E0794305170517A6002729C7 /* factqury.c in Sources */,
+				E0794307170517A6002729C7 /* factrete.c in Sources */,
+				E0794309170517A6002729C7 /* factrhs.c in Sources */,
+				E079430B170517A6002729C7 /* filecom.c in Sources */,
+				E079430D170517A6002729C7 /* filertr.c in Sources */,
+				E079430F170517A6002729C7 /* generate.c in Sources */,
+				E0794311170517A6002729C7 /* genrcbin.c in Sources */,
+				E0794313170517A6002729C7 /* genrccmp.c in Sources */,
+				E0794315170517A6002729C7 /* genrccom.c in Sources */,
+				E0794317170517A6002729C7 /* genrcexe.c in Sources */,
+				E0794319170517A6002729C7 /* genrcfun.c in Sources */,
+				E079431B170517A6002729C7 /* genrcpsr.c in Sources */,
+				E079431D170517A6002729C7 /* globlbin.c in Sources */,
+				E079431F170517A6002729C7 /* globlbsc.c in Sources */,
+				E0794321170517A6002729C7 /* globlcmp.c in Sources */,
+				E0794323170517A6002729C7 /* globlcom.c in Sources */,
+				E0794325170517A6002729C7 /* globldef.c in Sources */,
+				E0794327170517A6002729C7 /* globlpsr.c in Sources */,
+				E0794329170517A6002729C7 /* immthpsr.c in Sources */,
+				E079432B170517A6002729C7 /* incrrset.c in Sources */,
+				E079432D170517A6002729C7 /* inherpsr.c in Sources */,
+				E079432F170517A6002729C7 /* inscom.c in Sources */,
+				E0794331170517A6002729C7 /* insfile.c in Sources */,
+				E0794333170517A6002729C7 /* insfun.c in Sources */,
+				E0794335170517A6002729C7 /* insmngr.c in Sources */,
+				E0794337170517A6002729C7 /* insmoddp.c in Sources */,
+				E0794339170517A6002729C7 /* insmult.c in Sources */,
+				E079433B170517A6002729C7 /* inspsr.c in Sources */,
+				E079433D170517A6002729C7 /* insquery.c in Sources */,
+				E079433F170517A6002729C7 /* insqypsr.c in Sources */,
+				E0794341170517A6002729C7 /* iofun.c in Sources */,
+				E0794343170517A6002729C7 /* lgcldpnd.c in Sources */,
+				E0794345170517A6002729C7 /* main.c in Sources */,
+				E0794347170517A6002729C7 /* memalloc.c in Sources */,
+				E0794349170517A6002729C7 /* miscfun.c in Sources */,
+				E079434B170517A6002729C7 /* modulbin.c in Sources */,
+				E079434D170517A6002729C7 /* modulbsc.c in Sources */,
+				E079434F170517A6002729C7 /* modulcmp.c in Sources */,
+				E0794351170517A6002729C7 /* moduldef.c in Sources */,
+				E0794353170517A6002729C7 /* modulpsr.c in Sources */,
+				E0794355170517A6002729C7 /* modulutl.c in Sources */,
+				E0794357170517A6002729C7 /* msgcom.c in Sources */,
+				E0794359170517A6002729C7 /* msgfun.c in Sources */,
+				E079435B170517A6002729C7 /* msgpass.c in Sources */,
+				E079435D170517A6002729C7 /* msgpsr.c in Sources */,
+				E079435F170517A6002729C7 /* multifld.c in Sources */,
+				E0794361170517A6002729C7 /* multifun.c in Sources */,
+				E0794364170517A6002729C7 /* objbin.c in Sources */,
+				E0794366170517A6002729C7 /* objcmp.c in Sources */,
+				E0794369170517A6002729C7 /* objrtbin.c in Sources */,
+				E079436B170517A6002729C7 /* objrtbld.c in Sources */,
+				E079436D170517A6002729C7 /* objrtcmp.c in Sources */,
+				E079436F170517A6002729C7 /* objrtfnx.c in Sources */,
+				E0794371170517A6002729C7 /* objrtgen.c in Sources */,
+				E0794373170517A6002729C7 /* objrtmch.c in Sources */,
+				E0794375170517A6002729C7 /* parsefun.c in Sources */,
+				E0794377170517A6002729C7 /* pattern.c in Sources */,
+				E0794379170517A6002729C7 /* pprint.c in Sources */,
+				E079437B170517A6002729C7 /* prccode.c in Sources */,
+				E079437D170517A6002729C7 /* prcdrfun.c in Sources */,
+				E079437F170517A6002729C7 /* prcdrpsr.c in Sources */,
+				E0794381170517A6002729C7 /* prdctfun.c in Sources */,
+				E0794383170517A6002729C7 /* prntutil.c in Sources */,
+				E0794385170517A6002729C7 /* proflfun.c in Sources */,
+				E0794387170517A6002729C7 /* reorder.c in Sources */,
+				E0794389170517A6002729C7 /* reteutil.c in Sources */,
+				E079438B170517A6002729C7 /* retract.c in Sources */,
+				E079438D170517A6002729C7 /* router.c in Sources */,
+				E079438F170517A6002729C7 /* rulebin.c in Sources */,
+				E0794391170517A6002729C7 /* rulebld.c in Sources */,
+				E0794393170517A6002729C7 /* rulebsc.c in Sources */,
+				E0794395170517A6002729C7 /* rulecmp.c in Sources */,
+				E0794397170517A6002729C7 /* rulecom.c in Sources */,
+				E0794399170517A6002729C7 /* rulecstr.c in Sources */,
+				E079439B170517A6002729C7 /* ruledef.c in Sources */,
+				E079439D170517A6002729C7 /* ruledlt.c in Sources */,
+				E079439F170517A6002729C7 /* rulelhs.c in Sources */,
+				E07943A1170517A6002729C7 /* rulepsr.c in Sources */,
+				E07943A3170517A6002729C7 /* scanner.c in Sources */,
+				E07943A7170517A6002729C7 /* sortfun.c in Sources */,
+				E07943A9170517A6002729C7 /* strngfun.c in Sources */,
+				E07943AB170517A6002729C7 /* strngrtr.c in Sources */,
+				E07943AD170517A6002729C7 /* symblbin.c in Sources */,
+				E07943AF170517A6002729C7 /* symblcmp.c in Sources */,
+				E07943B1170517A6002729C7 /* symbol.c in Sources */,
+				E07943B3170517A6002729C7 /* sysdep.c in Sources */,
+				E07943B5170517A6002729C7 /* textpro.c in Sources */,
+				E07943B7170517A6002729C7 /* tmpltbin.c in Sources */,
+				E07943B9170517A6002729C7 /* tmpltbsc.c in Sources */,
+				E07943BB170517A6002729C7 /* tmpltcmp.c in Sources */,
+				E07943BD170517A6002729C7 /* tmpltdef.c in Sources */,
+				E07943BF170517A6002729C7 /* tmpltfun.c in Sources */,
+				E07943C1170517A6002729C7 /* tmpltlhs.c in Sources */,
+				E07943C3170517A6002729C7 /* tmpltpsr.c in Sources */,
+				E07943C5170517A6002729C7 /* tmpltrhs.c in Sources */,
+				E07943C7170517A6002729C7 /* tmpltutl.c in Sources */,
+				E07943C9170517A6002729C7 /* userdata.c in Sources */,
+				E07943CB170517A6002729C7 /* userfunctions.c in Sources */,
+				E07943CD170517A6002729C7 /* utility.c in Sources */,
+				E07943CF170517A6002729C7 /* watch.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +1737,7 @@
 				GCC_PREFIX_HEADER = "CLIPS/CLIPS-Prefix.pch";
 				INFOPLIST_FILE = "CLIPS/CLIPS-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.7;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -382,6 +1753,7 @@
 				GCC_PREFIX_HEADER = "CLIPS/CLIPS-Prefix.pch";
 				INFOPLIST_FILE = "CLIPS/CLIPS-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.7;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
@@ -431,6 +1803,7 @@
 				E079398B170500A5002729C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E079398C170500A5002729C7 /* Build configuration list for PBXNativeTarget "CLIPSTests" */ = {
 			isa = XCConfigurationList;
@@ -439,6 +1812,7 @@
 				E079398E170500A5002729C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

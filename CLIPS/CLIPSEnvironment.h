@@ -23,13 +23,13 @@
 -(Boolean) eval: (NSString*) input storageUnit: (DATA_OBJECT_PTR) value;
 -(void) halt;
 -(void*) assertString: (NSString*) string;
--(void) makeInstanceFromString: (NSString*) string;
--(void) makeInstancesFromString: (NSString*) instances;
+-(void*) makeInstanceFromString: (NSString*) string;
+-(Boolean) makeInstancesFromString: (NSString*) instances;
 -(void) printRouter: (NSString*) router withMessage: (NSString*) message;
 -(void) printMessage: (NSString*) message;
 -(void) printError: (NSString*) message;
--(void) addFunction: (NSString*) name returnType: (char) retType fnPtr: (void*) fPtr fnName: (NSString*) fnName;
--(void) addFunction2: (NSString*) name returnType: (char) retType fnPtr: (void*) fPtr fnName: (NSString*) fnName fnArgs: (NSString*) fnArgs;
+-(void) defineFunction: (NSString*) name returnType: (char) retType fnPtr: (void*) fPtr fnName: (NSString*) fnName;
+-(void) defineFunction2: (NSString*) name returnType: (char) retType fnPtr: (void*) fPtr fnName: (NSString*) fnName fnArgs: (NSString*) fnArgs;
 -(NSInteger) argCount: (NSString*) functionName;
 -(Boolean) argCountCheck: (NSString*) functionName qualifier: (int) qualifier count: (int) aCount;
 -(Boolean) argTypeCheck: (NSString*) functionName type: (int) qType targetIndex: (int) offset

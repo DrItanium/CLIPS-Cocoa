@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E016487F170529E800872601 /* CLIPS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E079395F170500A4002729C7 /* CLIPS.framework */; };
+		E01648BA1705330900872601 /* NSLogRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = E01648B91705330900872601 /* NSLogRouter.m */; };
+		E01648BB1705350B00872601 /* NSLogRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = E01648B8170532AC00872601 /* NSLogRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E0793963170500A4002729C7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0793962170500A4002729C7 /* Cocoa.framework */; };
 		E079396D170500A4002729C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E079396B170500A4002729C7 /* InfoPlist.strings */; };
 		E0794279170517A6002729C7 /* agenda.c in Sources */ = {isa = PBXBuildFile; fileRef = E0794121170517A5002729C7 /* agenda.c */; };
@@ -356,6 +357,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E01648B8170532AC00872601 /* NSLogRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSLogRouter.h; sourceTree = "<group>"; };
+		E01648B91705330900872601 /* NSLogRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSLogRouter.m; sourceTree = "<group>"; };
 		E079395F170500A4002729C7 /* CLIPS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CLIPS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0793962170500A4002729C7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E0793965170500A4002729C7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -364,7 +367,6 @@
 		E079396A170500A4002729C7 /* CLIPS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CLIPS-Info.plist"; sourceTree = "<group>"; };
 		E079396C170500A4002729C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E079396E170500A4002729C7 /* CLIPS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CLIPS-Prefix.pch"; sourceTree = "<group>"; };
-		E0793978170500A5002729C7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		E0794121170517A5002729C7 /* agenda.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = agenda.c; sourceTree = "<group>"; };
 		E0794122170517A5002729C7 /* agenda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = agenda.h; sourceTree = "<group>"; };
 		E0794123170517A5002729C7 /* analysis.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = analysis.c; sourceTree = "<group>"; };
@@ -716,7 +718,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0793963170500A4002729C7 /* Cocoa.framework in Frameworks */,
-				E016487F170529E800872601 /* CLIPS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -744,7 +745,6 @@
 			isa = PBXGroup;
 			children = (
 				E0793962170500A4002729C7 /* Cocoa.framework */,
-				E0793978170500A5002729C7 /* SenTestingKit.framework */,
 				E0793964170500A4002729C7 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -1107,6 +1107,8 @@
 				E0794278170517A5002729C7 /* watch.h */,
 				E079413B170517A5002729C7 /* CLIPSEnvironment.m */,
 				E0793969170500A4002729C7 /* Supporting Files */,
+				E01648B8170532AC00872601 /* NSLogRouter.h */,
+				E01648B91705330900872601 /* NSLogRouter.m */,
 			);
 			path = CLIPS;
 			sourceTree = "<group>";
@@ -1302,6 +1304,7 @@
 				E07943CC170517A6002729C7 /* usrsetup.h in Headers */,
 				E07943CE170517A6002729C7 /* utility.h in Headers */,
 				E07943D0170517A6002729C7 /* watch.h in Headers */,
+				E01648BB1705350B00872601 /* NSLogRouter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1537,6 +1540,7 @@
 				E07943CB170517A6002729C7 /* userfunctions.c in Sources */,
 				E07943CD170517A6002729C7 /* utility.c in Sources */,
 				E07943CF170517A6002729C7 /* watch.c in Sources */,
+				E01648BA1705330900872601 /* NSLogRouter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1616,6 +1620,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CLIPS/CLIPS-Prefix.pch";
 				INFOPLIST_FILE = "CLIPS/CLIPS-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
@@ -1633,6 +1638,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CLIPS/CLIPS-Prefix.pch";
 				INFOPLIST_FILE = "CLIPS/CLIPS-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
